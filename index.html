@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norhaslina Daoh | E-Portfolio (Mobile & Web Developer Intern)</title>
+
+  <!-- Google Fonts: Syne (Display), Plus Jakarta Sans (EN), Anuphan (TH) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+
+  <!-- พื้นหลังตารางสีฟ้าพาสเทล + วงกลม Parallax -->
+  <div class="pastel-grid-bg" aria-hidden="true">
+    <div class="glow-orb orb-1 parallax-scroll" data-speed="0.12"></div>
+    <div class="glow-orb orb-2 parallax-scroll" data-speed="-0.08"></div>
+    <div class="glow-orb orb-3 parallax-scroll" data-speed="0.06"></div>
+  </div>
+
+  <!-- ================= 1. NAVBAR ================= -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top glass-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-extrabold text-navy d-flex align-items-center gap-2" href="#home" id="logoLink">
+        <span class="brand-dot"></span>
+        <span>NORHASLINA<span class="text-sky">.DEV</span></span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <!-- ปุ่มสลับภาษา TH / EN -->
+        <button id="langToggleBtn" class="btn btn-lang-toggle rounded-pill px-3 py-1" type="button">
+          <i class="bi bi-globe2 me-1 text-sky"></i>
+          <span id="langLabel">EN</span>
+        </button>
+
+        <a href="assets/docs/Resume_Norhaslina_Daoh.pdf" target="_blank" class="btn btn-sky btn-sm rounded-pill px-3 py-2 d-none d-sm-inline-flex align-items-center gap-1 shadow-sm">
+          <i class="bi bi-file-earmark-arrow-down"></i>
+          <span data-i18n="nav_resume">High School</span>
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <i class="bi bi-list fs-2 text-navy"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse order-lg-2" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">เกี่ยวกับฉัน</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav_skills">ทักษะ & ตัวอย่างงาน</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">โปรเจกต์หลัก</a></li>
+          <li class="nav-item"><a class="nav-link" href="#activities" data-i18n="nav_activities">การแข่งขัน & กิจกรรม</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="nav_exp">ประสบการณ์ทำงาน</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= 2. HERO SECTION ================= -->
+  <header id="home" class="hero-wrapper position-relative overflow-hidden">
+    <div class="container">
+      
+      <!-- แถบ Editorial ด้านบน -->
+      <div class="d-flex justify-content-between align-items-left text-muted-slate small fw-semibold mb-2 px-2">
+        <span>/Norhaslina Daoh/</span>
+      </div>
+
+      <!-- พาดหัว PORTFOLIO ขนาดใหญ่ (Scroll Parallax) -->
+      <div class="hero-giant-title text-center parallax-scroll" data-speed="-0.06">
+        <h1 class="display-portfolio">PORTFOL<span class="star-i">I</span>O</h1>
+      </div>
+
+      <!-- กรอบแคปซูลตรงกลาง + ป้ายลอยตัว Mouse Parallax -->
+      <div class="hero-stage position-relative mx-auto my-4" id="heroParallaxStage" style="max-width: 1000px;">
+        
+        <!-- GIF แบนเนอร์ขนาด 1650x466 -->
+        <div class="hero-gif-wrapper shadow-pastel">
+          <!-- วางไฟล์ GIF ของคุณที่ assets/img/hero-banner.gif -->
+          <img src="assets/img/hero-banner.gif" alt="Norhaslina Portfolio Banner" class="hero-gif-img" onerror="this.style.backgroundColor='#E0F2FE'">
+        </div>
+        
+        <!-- ป้ายสถานะ Active -->
+        <div class="floating-pill pill-status parallax-mouse" data-depth="0.03">
+          <span class="status-dot"></span>
+          <span data-i18n="hero_status">พร้อมฝึกงานซัมเมอร์ มี.ค. – พ.ค.</span>
+        </div>
+
+        <div class="floating-pill pill-left parallax-mouse" data-depth="-0.04">
+          <i class="bi bi-code-square text-sky me-1"></i>
+          <span data-i18n="hero_pill_1">OOP Logic • C# • JS</span>
+        </div>
+
+        <div class="floating-pill pill-right parallax-mouse" data-depth="0.05">
+          <i class="bi bi-palette2 text-warning me-1"></i>
+          <span data-i18n="hero_pill_2">Figma UI/UX • 3D</span>
+        </div>
+
+        <!-- ลูกบาศก์ 3D ลอยตัว -->
+        <div class="floating-cube cube-1 parallax-mouse" data-depth="0.07"><img style="width: 100%;" src="assets/img/unity.png"></div>
+        <div class="floating-cube cube-2 parallax-mouse" data-depth="-0.06"><img style="width: 100%;" src="assets/img/react.png"></div>
+        <div class="floating-cube cube-3 parallax-mouse" data-depth="0.05">AR</div>
+        <div class="floating-cube cube-4 parallax-mouse" data-depth="-0.05"><img style="width: 100%;" src="assets/img/figma.png"></div>
+      </div>
+
+        <!-- กรอบแคปซูลแนะนำตัว -->
+        <div class="hero-text-content text-center mx-auto mt-4 px-3" style="max-width: 680px;">
+        <h2 class="h3 fw-extrabold text-navy mb-1" data-i18n="hero_name">
+          นางสาวโนรฮัสลีนาห์ ดาโอ๊ะ (โนร)
+        </h2>
+        <p class="text-sky fw-bold small mb-3" data-i18n="hero_role">
+          นักศึกษาชั้นปีที่ 3 เทคโนโลยีดิจิทัลและสื่อสารการศึกษา | ม.อ.ปัตตานี
+        </p>
+        <p class="text-muted-slate small mb-4" data-i18n="hero_bio">
+          หลงใหลในการพัฒนาซอฟต์แวร์ทั้งฝั่ง Mobile App, เกม 2D/AR และระบบเว็บไซต์ฐานข้อมูลที่ใช้งานจริง ผสานทักษะการออกแบบ UI/UX งานกราฟิก 3D และภาษา พร้อมเรียนรู้เครื่องมือใหม่ๆ และเติบโตไปกับทีมเสมอค่ะ
+        </p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <a href="#projects" class="btn btn-sky rounded-pill px-4 py-2 shadow-sm">
+            <i class="bi bi-rocket-takeoff me-1"></i>
+            <span data-i18n="hero_btn_proj">ดูโปรเจกต์ & งานวิจัย</span>
+          </a>
+          <a href="gallery.html?filter=all" class="btn btn-white-pill rounded-pill px-4 py-2 go-to-gallery">
+            <i class="bi bi-images me-1 text-sky"></i>
+            <span data-i18n="hero_btn_gallery">เปิดแกลลอรีรวมผลงานทุกด้าน</span>
+          </a>
+          <!-- <a href="https://github.com/alynjas" target="_blank" class="btn btn-white-pill rounded-pill px-3 py-2">
+            <i class="bi bi-github me-1"></i>GitHub
+          </a> -->
+        </div>
+      </div>
+
+      <!-- แถบการ์ดเอียงสลับองศา 4 จุดเด่นหลัก -->
+      <div class="row g-3 justify-content-center mt-3">
+        
+        <!-- การ์ด 1: NICE 2026 Research -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="#projects" class="text-decoration-none h-100 d-block">
+            <div class="tilt-card tilt-left p-4 d-flex flex-column justify-content-between h-100 text-start" style="min-height: 160px;">
+              <i class="bi bi-controller fs-1 text-sky mb-3"></i>
+              <div>
+                <h3 class="fw-bolder text-navy mb-1" style="font-size: 1.05rem;" data-i18n="hl_1">วิจัยเกมมือถือ 2D ระดับชาติ</h3>
+                <p class="text-muted-slate small fw-semibold mb-0" style="font-size: 0.8rem;">NICE 2026 Research</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- การ์ด 2: Active Production -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="#projects" class="text-decoration-none h-100 d-block">
+            <div class="tilt-card tilt-right p-4 d-flex flex-column justify-content-between h-100 text-start" style="min-height: 160px;">
+              <i class="bi bi-database-fill-check fs-1 text-sky mb-3"></i>
+              <div>
+                <h3 class="fw-bolder text-navy mb-1" style="font-size: 1.05rem;" data-i18n="hl_2">ระบบเว็บใช้งานจริง 200+ คน</h3>
+                <p class="text-muted-slate small fw-semibold mb-0" style="font-size: 0.8rem;">Active Production</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- การ์ด 3: Fastwork -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="#experience" class="text-decoration-none h-100 d-block">
+            <div class="tilt-card tilt-left p-4 d-flex flex-column justify-content-between h-100 text-start" style="min-height: 160px;">
+              <img src="assets/img/fastwork.png" alt="Fastwork Logo" style="width: 30%;">
+              <div>
+                <h3 class="fw-bolder text-navy mb-1" style="font-size: 1.05rem;" data-i18n="hl_3">ส่งมอบงานฟรีแลนซ์ 25+ ชิ้น</h3>
+                <p class="text-muted-slate small fw-semibold mb-0" style="font-size: 0.8rem;">Fastwork</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- การ์ด 4: Hackathon & Awards (สลับเป็นสีฟ้าทึบ) -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="#activities" class="text-decoration-none h-100 d-block">
+            <div class="tilt-card tilt-right p-4 d-flex flex-column justify-content-between h-100 text-start" style="min-height: 160px;">
+              <i class="bi bi-trophy-fill fs-1 text-sky mb-3"></i>
+              <div>
+                <h3 class="fw-bolder text-navy mb-1" style="font-size: 1.05rem;" data-i18n="hl_4">รางวัลประกวดนวัตกรรม</h3>
+                <p class="text-muted-slate small fw-semibold mb-0" style="font-size: 0.8rem;">Hackathon & Awards</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= 3. ABOUT ME & EDUCATION TIMELINE ================= -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        
+        <!-- ฝั่งซ้าย: ประวัติส่วนตัว & ข้อมูลติดต่อ -->
+        <div class="col-lg-6">
+          <div class="about-showcase-box h-100 p-4 p-md-5 d-flex flex-column justify-content-between">
+            <div>
+              <!-- <span class="section-pill" data-i18n="about_tag">PERSONAL PROFILE & CONTACT</span> -->
+              <h2 class="h2 fw-extrabold text-navy mt-2 mb-3" data-i18n="about_title">
+                เกี่ยวกับฉัน
+              </h2>
+              <p class="text-muted-slate small leading-relaxed mb-4" data-i18n="about_p1">
+                สวัสดีค่ะ โนรเป็นนักศึกษาชั้นปีที่ 3 ที่ชอบผสมผสานตรรกะการเขียนโปรแกรม (OOP) เข้ากับการออกแบบสื่ออินเทอร์แอกทีฟและ UI/UX ที่ใช้งานง่าย มีความตั้งใจที่จะฝึกงานช่วงซัมเมอร์ (มีนาคม – มิถุนายน) ในตำแหน่ง Mobile Developer Intern หรือ Web Developer Intern เพื่อเรียนรู้กระบวนการทำงานจริงในระดับองค์กรค่ะ
+              </p>
+
+              <!-- ตารางข้อมูลติดต่อกระชับ -->
+              <div class="contact-info-list d-flex flex-column gap-3 mb-4">
+                <div class="info-item">
+                  <i class="bi bi-person-badge text-sky"></i>
+                  <div>
+                    <span class="tiny-label d-block" data-i18n="lbl_fullname">ชื่อ-นามสกุล:</span>
+                    <strong class="text-navy small" data-i18n="val_fullname">นางสาวโนรฮัสลีนาห์ ดาโอ๊ะ (Norhaslina Daoh)</strong>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <i class="bi bi-telephone-fill text-sky"></i>
+                  <div>
+                    <span class="tiny-label d-block" data-i18n="lbl_phone">เบอร์โทรศัพท์:</span>
+                    <a href="tel:+66951723597" class="fw-bold text-navy small text-decoration-none">+66 95 172 3597</a>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <i class="bi bi-envelope-at-fill text-sky"></i>
+                  <div>
+                    <span class="tiny-label d-block">Email:</span>
+                    <strong class="text-navy small">Norhaslinadh@gmail.com</strong>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <i class="bi bi-geo-alt-fill text-sky"></i>
+                  <div>
+                    <span class="tiny-label d-block" data-i18n="lbl_loc">ที่อยู่ปัจจุบัน:</span>
+                    <span class="text-navy small" data-i18n="val_loc">จังหวัด ยะลา</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- การ์ดซ้อนแสดงสถิติ Fastwork -->
+            <div class="mini-fastwork-banner p-3 rounded-4 border border-sky-subtle bg-white d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <img src="assets/img/fastwork.png" alt="Fastwork Logo" style="width: 15%;">
+                <div>
+                  <div class="fw-extrabold text-navy small" data-i18n="fw_mini_title">Fastwork Verified Freelancer</div>
+                  <div class="text-muted-slate tiny-text" data-i18n="fw_mini_desc">25+ ออเดอร์สำเร็จ 100% • ลูกค้าจ้างซ้ำ 15 ครั้ง</div>
+                </div>
+              </div>
+              <a href="#experience" class="btn btn-sm btn-pastel-action rounded-pill px-3">Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ฝั่งขวา: ประวัติการศึกษา (เรียงจากปัจจุบันย้อนหลังไป มหาลัย -> ม.ปลาย -> ม.ต้น) -->
+        <div class="col-lg-6">
+          <div class="about-showcase-box h-100 p-4 p-md-5">
+            <!-- <span class="section-pill" data-i18n="edu_tag">EDUCATION TIMELINE (CURRENT → PAST)</span> -->
+            <h2 class="h2 fw-extrabold text-navy mt-2 mb-4" data-i18n="edu_title">
+              ประวัติการศึกษา
+            </h2>
+
+            <div class="edu-timeline-v2">
+              
+              <!-- 1. มหาวิทยาลัย (ปัจจุบัน - ไฮไลต์เด่น) -->
+              <div class="edu-item">
+                <!-- กรอบโลโก้ (ใส่คลาส active-logo เพื่อเน้นให้เด่น) -->
+                <div class="edu-logo-container active-logo">
+                  <!-- นำไฟล์โลโก้ ม.อ. มาใส่ในโฟลเดอร์ img -->
+                  <img src="assets/img/psu.png" alt="PSU Logo" class="edu-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/th/thumb/e/ea/Prince_of_Songkla_University_Emblem.png/200px-Prince_of_Songkla_University_Emblem.png'">
+                </div>
+                
+                <!-- กล่องข้อความ (ใส่คลาส active-card) -->
+                <div class="edu-card active-card">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                    <span class="badge bg-sky-solid rounded-pill" data-i18n="edu_1_period">2567 – ปัจจุบัน (คาดว่าจบ 2570)</span>
+                    <span class="tiny-label fw-bold text-sky">ปริญญาตรี (ชั้นปีที่ 3)</span>
+                  </div>
+                  <h5 class="fw-extrabold text-navy mb-1" data-i18n="edu_1_school">มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตปัตตานี</h5>
+                  <div class="text-sky fw-semibold small mb-2" data-i18n="edu_1_major">คณะศึกษาศาสตร์ สาขาวิชาเทคโนโลยีดิจิทัลและสื่อสารการศึกษา</div>
+                  <p class="text-muted-slate small mb-0" data-i18n="edu_1_detail">
+                    ศึกษาด้านการพัฒนาซอฟต์แวร์และเว็บแอปพลิเคชัน การเขียนโปรแกรมเชิงวัตถุ (OOP) ระบบฐานข้อมูล นวัตกรรมเกมและ AR เพื่อการศึกษา และการออกแบบ UI/UX
+                  </p>
+                </div>
+              </div>
+
+              <!-- 2. มัธยมศึกษาตอนปลาย -->
+              <div class="edu-item">
+                <div class="edu-logo-container">
+                  <!-- นำไฟล์โลโก้ รามันห์ศิริวิทย์ มาใส่ -->
+                  <img src="assets/img/rs.png" alt="Raman Siriwit Logo" class="edu-logo" onerror="this.src='https://data.bopp-obec.info/emis/pic_school/1095110196.jpg'">
+                </div>
+                
+                <div class="edu-card">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                    <span class="badge bg-sky-soft text-sky rounded-pill" data-i18n="edu_2_period">มัธยมศึกษาตอนปลาย (ม.4 – ม.6)</span>
+                    <span class="badge bg-mint-soft text-success rounded-pill">GPAX 3.93</span>
+                  </div>
+                  <h5 class="fw-extrabold text-navy mb-1" data-i18n="edu_2_school">โรงเรียนรามันห์ศิริวิทย์ จ.ยะลา</h5>
+                  <div class="text-sky fw-semibold small mb-2" data-i18n="edu_2_major">แผนการเรียน วิทยาศาสตร์ – คณิตศาสตร์</div>
+                  <p class="text-muted-slate small mb-0" data-i18n="edu_2_detail">
+                    หัวหน้าทีมพัฒนาโครงงานซอฟต์แวร์ระบบสารสนเทศผู้เรียน (รางวัลเหรียญทองระดับชาติ) นักเรียนสร้างชื่อเสียงยอดเยี่ยมของโรงเรียน และตัวแทนแข่งขันตอบปัญหา IT
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3. มัธยมศึกษาตอนต้น -->
+              <div class="edu-item">
+                <div class="edu-logo-container">
+                  <!-- โลโก้เดียวกัน -->
+                  <img src="assets/img/rs.png" alt="Raman Siriwit Logo" class="edu-logo" onerror="this.src='https://data.bopp-obec.info/emis/pic_school/1095110196.jpg'">
+                </div>
+                
+                <div class="edu-card">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                    <span class="badge bg-sky-soft text-sky rounded-pill" data-i18n="edu_3_period">มัธยมศึกษาตอนต้น (ม.1 – ม.3)</span>
+                    <span class="tiny-label">พื้นฐานวิทย์-คณิต & ภาษา</span>
+                  </div>
+                  <h5 class="fw-extrabold text-navy mb-1" data-i18n="edu_3_school">โรงเรียนรามันห์ศิริวิทย์ จ.ยะลา</h5>
+                  <p class="text-muted-slate small mb-0" data-i18n="edu_3_detail">
+                    เริ่มต้นฝึกฝนทักษะคอมพิวเตอร์ การสร้างเว็บไซต์เบื้องต้น และได้รับรางวัลเหรียญทองการแข่งขันต่อคำศัพท์ภาษาอังกฤษ (Crossword)
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. SKILLS & INTERACTIVE GALLERY (STACKED CARDS) ================= -->
+  <section id="skills" class="section-padding bg-white-glass overflow-hidden">
+    <div class="container">
+      
+      <!-- ส่วนหัว Skills -->
+      <div class="row align-items-end justify-content-between mb-5 gy-3">
+        <div class="col-lg-8 text-center text-lg-start">
+          <span class="section-pill" data-i18n="skill_tag">HARD SKILLS & VISUAL PROOF</span>
+          <h2 class="display-6 fw-extrabold text-navy mt-2 mb-1" data-i18n="skill_heading">
+            ทักษะและความสามารถ
+          </h2>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <a href="gallery.html?filter=all" class="btn btn-sky rounded-pill px-4 py-2 shadow-sm go-to-gallery">
+            <i class="bi bi-collection-play-fill me-1"></i>
+            <span data-i18n="btn_open_all_gallery">ดูแกลลอรีรวมทั้งหมด</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ================= กล่องภาษาโปรแกรม & เครื่องมือ (Overlap Header Box) ================= -->
+      <div class="row g-4 mb-5 px-2">
+        
+        <!-- 1. Programming Languages (ข้อความล้วน) -->
+        <div class="col-lg-6">
+          <div class="overlap-header-box h-100 shadow-sm">
+            <div class="overlap-header bg-sky-main" data-i18n="box_lang">
+              <i class="bi bi-code-slash me-2"></i>Programming Languages
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="skill-pill">C# (OOP)</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">HTML & CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Tools & Software (มีรูปภาพไอคอน) -->
+        <div class="col-lg-6">
+          <div class="overlap-header-box h-100 shadow-sm">
+            <div class="overlap-header bg-sky-main" data-i18n="box_tools">
+              <i class="bi bi-tools me-2"></i>Tools & Software
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <!-- ใส่ไฟล์รูปไอคอน .png ไว้ในโฟลเดอร์ assets/img/ -->
+              <span class="skill-pill">
+                <img src="assets/img/unity.png" alt="Unity" class="tool-icon" onerror="this.style.display='none'"> Unity 2D/3D
+              </span>
+              <span class="skill-pill">
+                <img src="assets/img/react.png" alt="React" class="tool-icon" onerror="this.style.display='none'"> React.js
+              </span>
+              <span class="skill-pill">
+                <img src="assets/img/figma.png" alt="Figma" class="tool-icon" onerror="this.style.display='none'"> Figma
+              </span>
+              <span class="skill-pill">
+                <img src="assets/img/Supabase.png" alt="Supabase" class="tool-icon" onerror="this.style.display='none'"> Supabase
+              </span>
+              <span class="skill-pill">
+                <img src="assets/img/Vuforia.png" alt="Vuforia" class="tool-icon" onerror="this.style.display='none'"> Vuforia AR
+              </span>
+              <span class="skill-pill">
+                <img src="assets/img/Github.png" alt="github" class="tool-icon" onerror="this.style.display='none'"> GitHub
+              </span>
+              <span class="skill-pill">
+                <img src="assets/img/Blender.png" alt="Blender" class="tool-icon" onerror="this.style.display='none'"> Blender
+              </span>
+              <span class="skill-pill">
+                <img src="assets/img/Nomad.png" alt="Nomad" class="tool-icon" onerror="this.style.display='none'"> Nomad
+              </span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!-- ================= จบส่วนกล่อง Overlap ================= -->
+
+      <!-- กล่องการ์ด 3 หมวดหมู่หลัก (Stacked Cards + Hover View More) -->
+      <div class="row g-4 justify-content-center px-2 mb-5">
+        
+        <!-- การ์ด 1: Tech & Software -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="gallery.html?filter=tech" class="text-decoration-none go-to-gallery d-block">
+            <div class="skill-stacked-card">
+              <!-- แผ่นที่ซ้อนอยู่ด้านหลัง -->
+              <div class="card-layer stack-layer-2 stack-tech-2"></div>
+              <div class="card-layer stack-layer-1 stack-tech-1"></div>
+              
+              <!-- แผ่นหน้าสุด (เนื้อหา) -->
+              <div class="card-layer stack-front border border-sky-subtle shadow-sm overflow-hidden p-0">
+                <img src="assets/img/C1.PNG" alt="Tech Background" class="front-bg-img">
+                <div class="front-glow-shape"></div>
+                <div class="front-content d-flex flex-column justify-content-center align-items-center text-center w-100 h-100 p-4">
+                  <span class="badge bg-sky-soft text-sky rounded-pill position-absolute top-0 end-0 m-3 shadow-sm">01</span>
+                  
+                  <i class="bi bi-cpu-fill fs-1 text-sky mb-2 mt-2"></i>
+                  <h4 class="fw-extrabold text-navy mb-2" data-i18n="hs_1_title" style="font-size: 1.15rem;">Tech & Software</h4>
+                  <p class="text-muted-slate tiny-text fw-semibold mb-0">Game • Web • Mobile & AR</p>
+                  
+                  <!-- ปุ่มดูเพิ่มเติม -->
+                  <div class="view-gallery-btn text-sky fw-bold small">
+                    ดูเพิ่มเติม <i class="bi bi-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </a>
+        </div>
+
+        <!-- การ์ด 2: Graphics & UI/UX -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="gallery.html?filter=uiux" class="text-decoration-none go-to-gallery d-block">
+            <div class="skill-stacked-card">
+              <!-- แผ่นที่ซ้อนอยู่ด้านหลัง -->
+              <div class="card-layer stack-layer-2 stack-tech-2"></div>
+              <div class="card-layer stack-layer-1 stack-tech-1"></div>
+              
+              <!-- แผ่นหน้าสุด (เนื้อหา) -->
+              <div class="card-layer stack-front border border-sky-subtle shadow-sm overflow-hidden p-0">
+                <img src="assets/img/C2.PNG" alt="Graphics Background" class="front-bg-img">
+                <div class="front-glow-shape"></div>
+                <div class="front-content d-flex flex-column justify-content-center align-items-center text-center w-100 h-100 p-4">
+                  <span class="badge bg-sky-soft text-sky rounded-pill position-absolute top-0 end-0 m-3 shadow-sm">02</span>
+                  
+                  <i class="bi bi-palette2 fs-1 text-sky mb-2 mt-2"></i>
+                  <h4 class="fw-extrabold text-navy mb-2" data-i18n="hs_2_title" style="font-size: 1.15rem;">Graphics & UI/UX</h4>
+                  <p class="text-muted-slate tiny-text fw-semibold mb-0">Drawing • UI/UX • Video • 3D</p>
+                  
+                  <!-- ปุ่มดูเพิ่มเติม -->
+                  <div class="view-gallery-btn text-sky fw-bold small">
+                    ดูเพิ่มเติม <i class="bi bi-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- การ์ด 3: Localization -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="gallery.html?filter=language" class="text-decoration-none go-to-gallery d-block">
+            <div class="skill-stacked-card">
+              <!-- แผ่นที่ซ้อนอยู่ด้านหลัง -->
+              <div class="card-layer stack-layer-2 stack-tech-2"></div>
+              <div class="card-layer stack-layer-1 stack-tech-1"></div>
+              
+              <!-- แผ่นหน้าสุด (เนื้อหา) -->
+              <div class="card-layer stack-front border border-sky-subtle shadow-sm overflow-hidden p-0">
+                <img src="assets/img/C1.PNG" alt="Localization Background" class="front-bg-img">
+                <div class="front-glow-shape"></div>
+                <div class="front-content d-flex flex-column justify-content-center align-items-center text-center w-100 h-100 p-4">
+                  <span class="badge bg-sky-soft text-sky rounded-pill position-absolute top-0 end-0 m-3 shadow-sm">03</span>
+                
+                  <i class="bi bi-translate fs-1 text-sky mb-2 mt-2"></i>
+                  <h4 class="fw-extrabold text-navy mb-2" data-i18n="hs_3_title" style="font-size: 1.15rem;">Localization</h4>
+                  <p class="text-muted-slate tiny-text fw-semibold mb-0">English • Malay • Manga Translation</p>
+                  
+                  <!-- ปุ่มดูเพิ่มเติม -->
+                  <div class="view-gallery-btn text-sky fw-bold small">
+                    ดูเพิ่มเติม <i class="bi bi-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- หมวด SOFT SKILLS (คงเดิม) -->
+      <div class="soft-skills-banner p-4 rounded-4 border border-sky-subtle bg-white shadow-sm mt-4">
+        <div class="row align-items-center gy-3">
+          <div class="col-lg-4">
+            <span class="section-pill mb-2">SOFT SKILLS & WORK MINDSET</span>
+            <h4 class="fw-extrabold text-navy mb-1" data-i18n="soft_heading">ทักษะการทำงานร่วมกับทีม</h4>
+            <p class="text-muted-slate small mb-0" data-i18n="soft_desc">
+              ทัศนคติในการทำงานที่สั่งสมจากการเป็นหัวหน้าโปรเจกต์ ประธานรับน้อง งานฟรีแลนซ์ และงานพาร์ทไทม์
+            </p>
+          </div>
+          <div class="col-lg-8">
+            <div class="d-flex flex-wrap gap-2">
+              <span class="soft-pill"><i class="bi bi-people-fill text-sky me-1"></i><span data-i18n="sf_1">Teamwork</span></span>
+              <span class="soft-pill"><i class="bi bi-Compass-fill text-sky me-1"></i><span data-i18n="sf_2">Leadership</span></span>
+              <span class="soft-pill"><i class="bi bi-chat-dots-fill text-sky me-1"></i><span data-i18n="sf_3">Communication</span></span>
+              <span class="soft-pill"><i class="bi bi-lightbulb-fill text-sky me-1"></i><span data-i18n="sf_4">Problem Solving</span></span>
+              <span class="soft-pill"><i class="bi bi-Cpu-fill text-sky me-1"></i><span data-i18n="sf_5">Eager to Learn & Try New Tools</span></span>
+              <span class="soft-pill"><i class="bi bi-arrow-repeat text-sky me-1"></i><span data-i18n="sf_6">Adaptability</span></span>
+              <span class="soft-pill"><i class="bi bi-clock-history text-sky me-1"></i><span data-i18n="sf_7">Time Management & Punctuality</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 5. FEATURED PROJECTS & RESEARCH ================= -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="row align-items-end justify-content-between mb-4 gy-3">
+        <div class="col-lg-7">
+          <span class="section-pill" data-i18n="proj_tag">CORE SOFTWARE PROJECTS & RESEARCH</span>
+          <h2 class="display-6 fw-extrabold text-navy mt-2 mb-1" data-i18n="proj_heading">
+            โปรเจกต์พัฒนาซอฟต์แวร์และงานวิจัย
+          </h2>
+        </div>
+
+        <!-- ปุ่มกรองหมวดหมู่โปรเจกต์ -->
+        <div class="col-lg-5 text-lg-end">
+          <div class="d-inline-flex flex-wrap gap-2">
+            <button class="btn filter-pill active" data-filter="all" data-i18n="flt_all">ทั้งหมด (4)</button>
+            <button class="btn filter-pill" data-filter="mobile">Mobile & AR</button>
+            <button class="btn filter-pill" data-filter="web">Full-Stack Web</button>
+            <button class="btn filter-pill" data-filter="research">Game & Research</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4" id="projectContainer">
+
+        <!-- 1. วิจัย NICE 2026 (ENPLACE 2D Game) -->
+        <div class="col-lg-6 project-card-wrap" data-cat="mobile research">
+          <article class="project-showcase-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="video-preview-box mb-3">
+                <span class="badge-corner bg-sky-solid"><i class="bi bi-journal-code me-1"></i>NICE 2026 Research</span>
+                <video class="w-100 h-100 object-fit-cover hover-to-play" loop muted playsinline poster="assets/img/enplace.png">
+                  <source src="assets/videos/enplace-preview.mov" type="video/mp4">
+                </video>
+                <!-- <img src="assets/img/enplace.png" alt="ENPLACE" style="width: 100%;"> -->
+              </div>
+
+              <div class="role-banner mb-2">
+                <i class="bi bi-person-workspace text-sky me-1"></i>
+                <strong data-i18n="role_lbl">บทบาท (My Role):</strong>
+                <span>Game Developer (C# OOP Logic), UI Designer & Co-Researcher</span>
+              </div>
+
+              <h3 class="h4 fw-extrabold text-navy mb-2" data-i18n="p1_title">
+                การพัฒนาเกมออนไลน์ 2 มิติ (ENPLACE) – งานวิจัยระดับชาติ NICE 2026
+              </h3>
+              <p class="text-muted-slate small mb-3" data-i18n="p1_desc">
+                พัฒนาเกมเพื่อการศึกษาภาษาอังกฤษเรื่องคำบุพบทบอกสถานที่ บูรณาการเข้ากับสถานที่และวัฒนธรรมท้องถิ่นจังหวัดยะลาด้วย Unity 2D และภาษา C# ผ่านการประเมินบทความวิจัยแบบ Blind Peer-Reviewed และนำเสนอในงานประชุมวิชาการ NICE 2026
+              </p>
+            </div>
+
+            <div>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="mini-tag">Unity 2D</span>
+                <span class="mini-tag">C# OOP</span>
+                <span class="mini-tag">WebGL Build</span>
+                <span class="mini-tag">NICE 2026 Conference</span>
+              </div>
+              <div class="d-flex gap-2 pt-3 border-top border-light">
+                <a href="gallery.html?filter=tech" class="btn btn-sm btn-pastel-action rounded-pill px-3 go-to-gallery">
+                  <i class="bi bi-eye me-1"></i>ดูภาพหน้าจอเกม
+                </a>
+                <!-- <a href="https://github.com/alynjas" target="_blank" class="btn btn-sm btn-outline-sky rounded-pill px-3">
+                  <i class="bi bi-github me-1"></i>GitHub
+                </a> -->
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2. Mobile App AR Marker (Fastwork & Unity Vuforia) -->
+        <div class="col-lg-6 project-card-wrap" data-cat="mobile">
+          <article class="project-showcase-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="video-preview-box mb-3">
+                <span class="badge-corner bg-mint-solid"><i class="bi bi-phone-vibrate me-1"></i>Mobile AR & Fastwork</span>
+                <video class="w-100 h-100 object-fit-cover hover-to-play" loop muted playsinline poster="assets/img/ar-enplace.png">
+                  <source src="assets/videos/ar-marker-preview.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="role-banner mb-2">
+                <i class="bi bi-person-workspace text-sky me-1"></i>
+                <strong data-i18n="role_lbl">บทบาท (My Role):</strong>
+                <span>Mobile AR Developer (Vuforia Target Tracking, C# Scripting & Mobile UI)</span>
+              </div>
+
+              <h3 class="h4 fw-extrabold text-navy mb-2" data-i18n="p2_title">
+                Mobile App สแกน AR Marker เพื่อการศึกษา (โปรเจกต์ & งานฟรีแลนซ์ Fastwork)
+              </h3>
+              <p class="text-muted-slate small mb-3" data-i18n="p2_desc">
+                พัฒนาแอปพลิเคชันบนสมาร์ทโฟนด้วย Unity และ Vuforia Image Target สำหรับสแกนภาพการ์ด AR เพื่อเรนเดอร์โมเดล 3 มิติพร้อมระบบควิซโต้ตอบ ส่งมอบงานจริงให้ลูกค้าบน Fastwork ด้วยความพึงพอใจ 100%
+              </p>
+            </div>
+          
+            <div>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="mini-tag">Unity Mobile</span>
+                <span class="mini-tag">Vuforia AR Marker</span>
+                <span class="mini-tag">C#</span>
+                <span class="mini-tag">3D Asset Integration</span>
+              </div>
+              <div class="d-flex gap-2 pt-3 border-top border-light">
+                <a href="gallery.html?filter=tech" class="btn btn-sm btn-pastel-action rounded-pill px-3 go-to-gallery">
+                  <i class="bi bi-eye me-1"></i>ดูตัวอย่างงาน AR
+                </a>
+                <!-- <a href="https://github.com/alynjas" target="_blank" class="btn btn-sm btn-outline-sky rounded-pill px-3">
+                  <i class="bi bi-github me-1"></i>Source Code
+                </a> -->
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3. Class Fund Management (เว็บเก็บเงินห้องรหัส 42) -->
+        <div class="col-lg-6 project-card-wrap" data-cat="web">
+          <article class="project-showcase-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="video-preview-box mb-3">
+                <span class="badge-corner bg-mint-solid"><i class="bi bi-check2-circle me-1"></i>Active Use (Cohort 42)</span>
+                <video class="w-100 h-100 object-fit-cover hover-to-play" loop muted playsinline poster="assets/img/web-fund.png">
+                  <source src="assets/videos/web-fund-preview.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="role-banner mb-2">
+                <i class="bi bi-person-workspace text-sky me-1"></i>
+                <strong data-i18n="role_lbl">บทบาท (My Role):</strong>
+                <span>Full-Stack Developer (Database Schema in Supabase, React Frontend & Vercel)</span>
+              </div>
+
+              <h3 class="h4 fw-extrabold text-navy mb-2" data-i18n="p3_title">
+                Class Fund Management – เว็บแอปจัดการเงินกองทุนห้อง (ใช้งานจริง)
+              </h3>
+              <p class="text-muted-slate small mb-3" data-i18n="p3_desc">
+                พัฒนาเว็บแอปพลิเคชันที่ปัจจุบันใช้งานจริงในห้องของนักศึกษาสาขาเทคโนฯ รหัส 42 สำหรับทำธุรกรรมบันทึกรายการโอน รายรับ และรายจ่ายเงินของชั้นปี ออกแบบฐานข้อมูลหลังบ้านด้วย Supabase ให้ตรวจสอบยอดแบบเรียลไทม์ได้อย่างโปร่งใส
+              </p>
+            </div>
+
+            <div>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="mini-tag">React.js</span>
+                <span class="mini-tag">Supabase Database</span>
+                <span class="mini-tag">JavaScript</span>
+                <span class="mini-tag">Responsive UI</span>
+              </div>
+              <div class="d-flex gap-2 pt-3 border-top border-light">
+                <a href="gallery.html?filter=tech" class="btn btn-sm btn-pastel-action rounded-pill px-3 go-to-gallery">
+                  <i class="bi bi-eye me-1"></i>ดูหน้าจอระบบเว็บ
+                </a>
+                <!-- <a href="https://github.com/alynjas" target="_blank" class="btn btn-sm btn-outline-sky rounded-pill px-3">
+                  <i class="bi bi-github me-1"></i>GitHub
+                </a> -->
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 4. เว็บจัดการระบบสารสนเทศโรงเรียนรามันห์ศิริวิทย์ -->
+        <div class="col-lg-6 project-card-wrap" data-cat="web">
+          <article class="project-showcase-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="video-preview-box mb-3">
+                <span class="badge-corner bg-sky-solid"><i class="bi bi-trophy-fill me-1"></i>เหรียญทองระดับชาติ & ใช้จริงใน ร.ร.</span>
+                <video class="w-100 h-100 object-fit-cover hover-to-play" loop muted playsinline poster="assets/img/web-school.png">
+                  <source src="assets/videos/web-school-preview.mp4" type="video/mp4">
+                </video>
+                <!-- <div class="video-fallback-overlay">
+                  <i class="bi bi-bar-chart-line-fill fs-1 text-sky"></i>
+                  <span class="fw-bold text-navy small mt-1">Raman Siriwit Student Information System</span>
+                  <small class="text-muted-slate tiny-text">Google Apps Script + Looker Studio Dashboard รองรับผู้ใช้กว่า 200+ คน</small>
+                </div> -->
+              </div>
+
+              <div class="role-banner mb-2">
+                <i class="bi bi-person-workspace text-sky me-1"></i>
+                <strong data-i18n="role_lbl">บทบาท (My Role):</strong>
+                <span>Team Leader & Lead App Script Developer (4 Sub-systems & Looker Studio)</span>
+              </div>
+
+              <h3 class="h4 fw-extrabold text-navy mb-2" data-i18n="p4_title">
+                ระบบบันทึกและเรียกดูสารสนเทศผู้เรียน โรงเรียนรามันห์ศิริวิทย์
+              </h3>
+              <p class="text-muted-slate small mb-3" data-i18n="p4_desc">
+                หัวหน้าทีมพัฒนาเว็บแอปพลิเคชันด้วย Google Apps Script 4 ระบบย่อย (ข้อมูลผู้เรียน, ผลการเรียน, หักคะแนนพฤติกรรม, การบ้าน) พร้อมระบบล็อกอินแยกสิทธิ์ครู/นักเรียน และแสดงผลกราฟสถิติด้วย Looker Studio ในเวลาไม่เกิน 2 วินาที ได้รับรางวัลเหรียญทองระดับชาติ (งานศิลปหัตถกรรม ครั้งที่ 70) และนำไปใช้จริงบนเว็บไซต์โรงเรียน
+              </p>
+            </div>
+
+            <div>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="mini-tag">Google Apps Script</span>
+                <span class="mini-tag">JavaScript</span>
+                <span class="mini-tag">Looker Studio</span>
+                <span class="mini-tag">HTML/CSS</span>
+              </div>
+              <div class="d-flex gap-2 pt-3 border-top border-light">
+                <a href="gallery.html?filter=tech" class="btn btn-sm btn-pastel-action rounded-pill px-3 go-to-gallery">
+                  <i class="bi bi-diagram-3 me-1"></i>ดูโครงสร้างระบบ
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. COMPETITIONS, HACKATHONS & LEADERSHIP ACTIVITIES ================= -->
+  <section id="activities" class="section-padding bg-white-glass">
+    <div class="container">
+      <div class="text-center max-w-650 mx-auto mb-5">
+        <span class="section-pill" data-i18n="act_tag">COMPETITIONS, HACKATHONS & CAMPUS LEADERSHIP</span>
+        <h2 class="display-6 fw-extrabold text-navy mt-2" data-i18n="act_heading">
+          รางวัลการแข่งขัน นวัตกรรม และกิจกรรมผู้นำ
+        </h2>
+        <p class="text-muted-slate small" data-i18n="act_sub">
+          รวบรวมผลงานการแข่งขันระดับมหาวิทยาลัย ระดับชาติ และบทบาทการทำกิจกรรมร่วมกับผู้อื่นตั้งแต่ระดับมัธยมปลายถึงปัจจุบัน
+        </p>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- คอลัมน์ซ้าย: การแข่งขันระดับมหาวิทยาลัย & Hackathon (2567 - 2569) -->
+        <div class="col-lg-6">
+          <div class="bento-group-card h-100 p-4">
+            <h4 class="fw-extrabold text-navy mb-4 d-flex align-items-center gap-2">
+              <span class="icon-circle bg-sky-soft text-sky"><i class="bi bi-trophy-fill"></i></span>
+              <span data-i18n="act_col1_title">การแข่งขันและเวทีวิชาการระดับมหาวิทยาลัย</span>
+            </h4>
+
+            <div class="activity-feed">
+              <div class="feed-item">
+                <span class="feed-year">2569 / 2026</span>
+                <h6 class="fw-bold text-navy mb-1" data-i18n="ac_1_t">นำเสนอวิจัยระดับชาติ NICE 2026 & โครงการ STEM ConnectHER Malaysia</h6>
+                <p class="text-muted-slate tiny-text mb-0" data-i18n="ac_1_d">
+                  นำเสนอบทความวิจัยนวัตกรรมเกม 2 มิติ (Oral Presentation) และได้รับคัดเลือกไปแลกเปลี่ยนเรียนรู้เทคโนโลยีที่ Boeing Malaysia และมหาวิทยาลัย UniSZA ประเทศมาเลเซีย
+                </p>
+              </div>
+
+              <div class="feed-item">
+                <span class="feed-year">2568 / 2025</span>
+                <h6 class="fw-bold text-navy mb-1" data-i18n="ac_2_t">ชนะเลิศ การประกวดความเป็นเลิศด้านสื่อและนวัตกรรมการเรียนรู้ภาษาอังกฤษ</h6>
+                <p class="text-muted-slate tiny-text mb-0" data-i18n="ac_2_d">
+                  คว้ารางวัลชนะเลิศอันดับ 1 ในการพัฒนาสื่อและนวัตกรรมการเรียนรู้ภาษาอังกฤษ จัดโดยคณะศึกษาศาสตร์ มหาวิทยาลัยสงขลานครินทร์
+                </p>
+              </div>
+
+              <div class="feed-item">
+                <span class="feed-year">2568 / 2025</span>
+                <h6 class="fw-bold text-navy mb-1" data-i18n="ac_3_t">เข้ารอบชิงชนะเลิศ โครงการประกวดนวัตกรรมการเรียนรู้ "Excellence Inno Teach" ครั้งที่ 2</h6>
+                <p class="text-muted-slate tiny-text mb-0" data-i18n="ac_3_d">
+                  ผ่านการคัดเลือกเข้าสู่รอบชิงชนะเลิศ (Finalist) ในการออกแบบและพัฒนานวัตกรรมสื่อการสอนดิจิทัล
+                </p>
+              </div>
+
+              <div class="feed-item">
+                <span class="feed-year">2567 / 2024</span>
+                <h6 class="fw-bold text-navy mb-1" data-i18n="ac_4_t">เข้ารอบชิงชนะเลิศ Southern Young Media for MIDL Hackathon</h6>
+                <p class="text-muted-slate tiny-text mb-0" data-i18n="ac_4_d">
+                  ระดมสมองออกแบบและสร้างสรรค์สื่อดิจิทัลสร้างสรรค์ในรูปแบบ Hackathon จนผ่านเข้าสู่รอบชิงชนะเลิศระดับภาคใต้
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- คอลัมน์ขวา: กิจกรรมภาวะผู้นำมหาลัย + ผลงานเด่นช่วงมัธยมปลายที่เสริมสาย Tech -->
+        <div class="col-lg-6">
+          <div class="bento-group-card h-100 p-4">
+            <h4 class="fw-extrabold text-navy mb-4 d-flex align-items-center gap-2">
+              <span class="icon-circle bg-mint-soft text-success"><i class="bi bi-stars"></i></span>
+              <span data-i18n="act_col2_title">ภาวะผู้นำ & รางวัลพื้นฐานสาย Tech ช่วงมัธยมปลาย</span>
+            </h4>
+
+            <div class="activity-feed">
+              <div class="feed-item">
+                <span class="feed-year">2568 / 2025</span>
+                <h6 class="fw-bold text-navy mb-1" data-i18n="ac_5_t">ประธานโครงการรับน้อง สาขาเทคโนโลยีดิจิทัลและสื่อสารการศึกษา</h6>
+                <p class="text-muted-slate tiny-text mb-0" data-i18n="ac_5_d">
+                  บริหารจัดการทีมงาน วางแผนตารางกิจกรรม ประสานงาน และแก้ไขปัญหาเฉพาะหน้าเพื่อให้โครงการสำเร็จลุล่วงอย่างราบรื่น
+                </p>
+              </div>
+
+              <div class="feed-item">
+                <span class="feed-year">2567 / 2024</span>
+                <h6 class="fw-bold text-navy mb-1" data-i18n="ac_6_t">คณะกรรมการสโมสรนักศึกษา คณะศึกษาศาสตร์ (ฝ่ายโสตทัศนูปกรณ์)</h6>
+                <p class="text-muted-slate tiny-text mb-0" data-i18n="ac_6_d">
+                  รับผิดชอบการออกแบบสื่อประชาสัมพันธ์ การจัดการระบบโสตฯ ถ่ายภาพ และตัดต่อวิดีโอกิจกรรมของคณะ
+                </p>
+              </div>
+
+              <div class="feed-item">
+                <span class="feed-year">มัธยมปลาย (ม.4–ม.6)</span>
+                <h6 class="fw-bold text-navy mb-1" data-i18n="ac_7_t">เหรียญทองระดับชาติ โครงงานซอฟต์แวร์ & รองชนะเลิศอันดับ 1 ตอบปัญหา IT ระดับภาค</h6>
+                <p class="text-muted-slate tiny-text mb-0" data-i18n="ac_7_d">
+                  คว้าเหรียญทองรองชนะเลิศอันดับ 1 ระดับชาติ งานศิลปหัตถกรรมครั้งที่ 70 (ประเภทซอฟต์แวร์) และรองชนะเลิศอันดับ 1 ตอบปัญหา IT งาน ม.อ.วิชาการ 2565
+                </p>
+              </div>
+
+              <div class="feed-item">
+                <span class="feed-year">มัธยมปลาย (ม.4–ม.6)</span>
+                <h6 class="fw-bold text-navy mb-1" data-i18n="ac_8_t">ค่าย CODE KATHON by depa (24 ทีมภูมิภาค) & หุ่นยนต์ Delivery Robot (Arduino)</h6>
+                <p class="text-muted-slate tiny-text mb-0" data-i18n="ac_8_d">
+                  ผ่านการอบรมเขียนโค้ด Python/PHP ควบคุม Raspberry Pi และ IoT กับสำนักงานส่งเสริมเศรษฐกิจดิจิทัล (depa) รวมถึงสร้างหุ่นยนต์ส่งของอัตโนมัติด้วย Arduino และชนะเลิศระดับจังหวัดการประกวดคลิปวิดีโอสั้น
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. WORK EXPERIENCE (Fastwork, NBT Yala, 7-Eleven Assistant Manager) ================= -->
+  <section id="experience" class="section-padding">
+    <div class="container">
+      <div class="text-center max-w-650 mx-auto mb-5">
+        <span class="section-pill" data-i18n="exp_tag">REAL-WORLD WORK EXPERIENCE</span>
+        <h2 class="display-6 fw-extrabold text-navy mt-2" data-i18n="exp_heading">
+          ประสบการณ์การทำงานจริง
+        </h2>
+        <p class="text-muted-slate small" data-i18n="exp_sub">
+          ฝึกฝนทักษะการทำงานจริงทั้งในสายพัฒนาซอฟต์แวร์/สื่อดิจิทัล การฝึกงานในองค์กรสื่อ และการบริหารจัดการงานบริการ
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        
+        <!-- 1. Freelance Fastwork -->
+        <div class="col-lg-4">
+          <div class="review-bento-card highlight-border h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-sky-solid rounded-pill px-3 py-1">2024 – Present</span>
+                <span class="fw-extrabold text-navy"><img src="assets/img/fastwork.png" alt="Fastwork Logo" style="width: 12%; margin-left: 45%; margin-right: 2%;">Fastwork</span>
+              </div>
+              <h4 class="fw-extrabold text-navy mb-1" data-i18n="w1_role">Freelance Developer & Digital Creator</h4>
+              <div class="text-sky fw-semibold small mb-3">Fastwork Platform (25+ Completed Projects)</div>
+              <ul class="text-muted-slate small ps-3 mb-3">
+                <li data-i18n="w1_b1">ส่งมอบงานพัฒนาเกม (Unity/AR Marker) เว็บไซต์ โมเดล 3 มิติ วาดภาพ/กราฟิก ตัดต่อวิดีโอ และแปลภาษามังงะ สำเร็จกว่า <strong>23 โปรเจกต์ (สำเร็จ 100%)</strong></li>
+                <li data-i18n="w1_b2">ทำงานไว มีคุณภาพ และสื่อสารชัดเจน จนมีลูกค้าประจำกลับมาจ้างซ้ำถึง <strong>14 ราย</strong></li>
+              </ul>
+            </div>
+            <button href="gallery.html?filter=all" class="btn btn-sm btn-pastel-action rounded-pill w-100 py-2 go-to-gallery">
+              <i class="bi bi-grid-fill me-1"></i>ดูตัวอย่างงานฟรีแลนซ์ทั้งหมด
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. NBT Yala Intern -->
+        <div class="col-lg-4">
+          <div class="review-bento-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-sky-soft text-sky rounded-pill px-3 py-1">Media Organization</span>
+                <span class="tiny-label fw-bold">Yala, Thailand</span>
+              </div>
+              <h4 class="fw-extrabold text-navy mb-1" data-i18n="w2_role">Content Creator & Media Intern</h4>
+              <div class="text-sky fw-semibold small mb-3">NBT Yala (สถานีวิทยุโทรทัศน์แห่งประเทศไทย จ.ยะลา)</div>
+              <ul class="text-muted-slate small ps-3 mb-3">
+                <li data-i18n="w2_b1">คิดสร้างสรรค์และผลิตคอนเทนต์ใหม่ๆ สำหรับบัญชี TikTok ทางการของ NBT Yala</li>
+                <li data-i18n="w2_b2">ตัดต่อวิดีโอสั้น ใส่โมชันกราฟิก และออกแบบโปสเตอร์ประชาสัมพันธ์ข่าวสารให้น่าสนใจและเข้าใจง่าย</li>
+              </ul>
+            </div>
+            <a href="gallery.html?filter=model3d" class="btn btn-sm btn-outline-sky rounded-pill w-100 py-2 go-to-gallery">
+              <i class="bi bi-film me-1"></i>ดูตัวอย่างงานตัดต่อ & โปสเตอร์
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. 7-Eleven Assistant Manager -->
+        <div class="col-lg-4">
+          <div class="review-bento-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-mint-soft text-success rounded-pill px-3 py-1">Management & Service</span>
+                <span class="tiny-label fw-bold">Leadership Proof</span>
+              </div>
+              <h4 class="fw-extrabold text-navy mb-1" data-i18n="w3_role">Assistant Store Manager (ผู้ช่วยผู้จัดการ)</h4>
+              <div class="text-sky fw-semibold small mb-3">7-Eleven (Part-time / Work Experience)</div>
+              <ul class="text-muted-slate small ps-3 mb-3">
+                <li data-i18n="w3_b1">ปฏิบัติงานในตำแหน่งผู้ช่วยผู้จัดการร้าน ดูแลความเรียบร้อยของระบบหน้าร้านและหลังร้าน บริหารจัดการสต็อกและยอดขาย</li>
+                <li data-i18n="w3_b2">ฝึกฝนความอดทน การทำงานภายใต้ความกดดัน การประสานงานร่วมกับเพื่อนร่วมทีม และการแก้ปัญหาเฉพาะหน้าได้อย่างรวดเร็ว</li>
+              </ul>
+            </div>
+            <div class="p-2 rounded-3 bg-sky-soft text-center small fw-bold text-sky">
+              <i class="bi bi-shield-check me-1"></i>Strong Ownership & Time Management
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8. CONTACT FOOTER ================= -->
+  <footer id="contact" class="section-padding pb-4">
+    <div class="container">
+      <div class="contact-hero-box text-center p-4 p-md-5 position-relative overflow-hidden">
+        <!-- <span class="section-pill" data-i18n="ft_tag">AVAILABLE FOR SUMMER INTERNSHIP</span> -->
+        <h2 class="display-4 fw-extrabold text-navy mt-2 mb-3">LET'S GET IN TOUCH</h2>
+        <p class="text-muted-slate max-w-600 mx-auto mb-4" data-i18n="ft_desc">
+          ขอบคุณที่เข้ามาชม E-Portfolio ของโนรนะคะ หากพี่ๆ กำลังมองหานักศึกษาฝึกงานตำแหน่ง <strong>Mobile Developer Intern</strong> หรือ <strong>Web Developer Intern</strong> ที่พร้อมลุยงาน เรียนรู้ไว และทำงานร่วมกับทีมได้อย่างดีเยี่ยม สามารถติดต่อโนรได้ทุกช่องทางเลยค่ะ
+        </p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+          <button id="copyEmailBtn" class="btn btn-sky btn-lg rounded-pill px-4 shadow-sm" data-email="Norhaslinadh@gmail.com">
+            <i class="bi bi-envelope-check-fill me-2"></i>
+            <span id="copyEmailLabel">Norhaslinadh@gmail.com (คลิกคัดลอก)</span>
+          </button>
+          <a href="tel:+66951723597" class="btn btn-white-pill btn-lg rounded-pill px-4">
+            <i class="bi bi-telephone-outbound-fill me-2 text-sky"></i>+66 95 172 3597
+          </a>
+          <!-- <a href="https://github.com/alynjas" target="_blank" class="btn btn-white-pill btn-lg rounded-pill px-4">
+            <i class="bi bi-github me-2"></i>github.com/alynjas
+          </a> -->
+        </div>
+
+        <!-- สติกเกอร์ตกแต่งด้านล่างสไตล์วิดีโอเรฟเฟอเรนซ์ -->
+        <div class="playful-footer-bar pt-4 mt-3 border-top border-sky-subtle d-flex flex-wrap justify-content-center gap-2">
+          <span class="footer-sticker">MOBILE INTERN</span>
+          <span class="footer-sticker">FULL-STACK WEB</span>
+          <span class="footer-sticker">UNITY 2D & AR</span>
+          <span class="footer-sticker">FIGMA UI/UX</span>
+          <span class="footer-sticker">3D & DIGITAL ART</span>
+          <span class="footer-sticker">FAST LEARNER</span>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center text-muted-slate small mt-4 px-2">
+        <span>© 2026 Norhaslina Daoh</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       INTERACTIVE MODAL GALLERY (เด้งขึ้นเมื่อคลิกดูตัวอย่างผลงานในแต่ละทักษะ)
+       ===================================================================== -->
+  
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

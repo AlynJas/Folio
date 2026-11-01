@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Visual Proof Gallery | Norhaslina Daoh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-ice">
+
+  <!-- พื้นหลัง Parallax (คงไว้เฉพาะพื้นหลัง) -->
+  <div class="pastel-grid-bg" aria-hidden="true">
+    <div class="glow-orb orb-1 parallax-scroll" data-speed="0.12"></div>
+    <div class="glow-orb orb-2 parallax-scroll" data-speed="-0.08"></div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg fixed-top glass-navbar shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-extrabold text-navy d-flex align-items-center gap-2" href="index.html" id="logoLink">
+        <span class="brand-dot"></span>
+        <span>NORHASLINA<span class="text-sky">.DEV</span></span>
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button id="langToggleBtn" class="btn btn-lang-toggle rounded-pill px-3 py-1" type="button">
+          <i class="bi bi-globe2 me-1 text-sky"></i><span id="langLabel">EN</span>
+        </button>
+        <a href="assets/docs/Resume_Norhaslina_Daoh.pdf" target="_blank" class="btn btn-sky btn-sm rounded-pill px-3 py-2 d-flex align-items-center gap-1 shadow-sm">
+          <i class="bi bi-file-earmark-arrow-down"></i> <span data-i18n="nav_resume">Resume (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+    
+  <main class="container position-relative overflow-hidden" style="padding-top: 7rem; padding-bottom: 5rem;">
+    
+    <div class="mb-4 text-center text-md-start">
+        <span class="section-pill mb-2" data-i18n="gallery_tag">INTERACTIVE VISUAL PROOF GALLERY</span>
+        <h1 class="fw-extrabold text-navy mt-1" id="modalTitle" data-i18n="gallery_title">
+          แกลลอรีผลงานแยกตามทักษะ
+        </h1>
+        <p class="text-muted-slate small" data-i18n="gallery_desc">คลิกที่รูปภาพหรือวิดีโอเพื่อขยายขนาดเต็มจอ</p>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2 mb-4" id="modalFilterTabs">
+      <button class="btn modal-tab-btn active" data-mfilter="all" data-i18n="filter_all">ทั้งหมด</button>
+      <button class="btn modal-tab-btn" data-mfilter="drawing" data-i18n="filter_draw">วาดรูป & LINE Sticker</button>
+      <button class="btn modal-tab-btn" data-mfilter="uiux" data-i18n="filter_uiux">ออกแบบ UI/UX & กราฟิก</button>
+      <button class="btn modal-tab-btn" data-mfilter="model3d" data-i18n="filter_3d">3D, AR Effect & Video</button>
+      <button class="btn modal-tab-btn" data-mfilter="language" data-i18n="filter_lang">แปลภาษามังงะ & ภาษา</button>
+      <button class="btn modal-tab-btn" data-mfilter="tech" data-i18n="filter_tech">เกม / เว็บ / Mobile AR</button>
+    </div>
+
+    <div class="row g-4" id="modalGalleryGrid">
+
+      <!-- ================= 1. หมวดวาดรูป & สติกเกอร์ไลน์ ================= -->
+      <div class="col-12 m-gallery-item" data-mcat="drawing">
+        <div class="category-header-line">
+          <h4 class="fw-extrabold text-navy mb-0" data-i18n="cat_drawing">ผลงานวาดรูป & LINE Sticker</h4>
+          <div class="line"></div>
+        </div>
+      </div>
+      
+      <div class="col-6 col-md-4 col-lg-3 m-gallery-item" data-mcat="drawing">
+        <!-- ลบ parallax-scroll ออก เพื่อให้กล่องอยู่ถูกตำแหน่งใน Grid -->
+        <div class="visual-card">
+          <a href="assets/img/Comic.png" class="glightbox" data-gallery="drawing" data-description="ผลงานวาดคอมมิค (Procreate)">
+            <img src="assets/img/Comic.png" alt="Comic Art" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x500/E0F2FE/0284C7?text=Comic'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Procreate</span><span data-i18n="g_comic" class="text-truncate">วาดคอมมิค 1 ตอน</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 m-gallery-item" data-mcat="drawing">
+        <div class="visual-card">
+          <a href="assets/img/stickers.png" class="glightbox" data-gallery="sticker">
+            <img src="assets/img/stickers.png" alt="LINE Sticker" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x500/E0F2FE/0284C7?text=LINE+Stickers'">
+            <div class="hover-overlay"><i class="bi bi-images"></i> 3 ภาพ</div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">ibisPaint X</span><span data-i18n="g_sticker" class="text-truncate">LINE Stickers</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 m-gallery-item" data-mcat="drawing">
+        <div class="visual-card">
+          <a href="assets/img/Character1.png" class="glightbox" data-gallery="anime">
+            <img src="assets/img/Character1.png" alt="Anime Art" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x500/E0F2FE/0284C7?text=Anime+Art'">
+            <div class="hover-overlay"><i class="bi bi-images"></i> 7 ภาพ</div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Procreate</span><span data-i18n="g_anime" class="text-truncate">ภาพประกอบเกมอนิเมะ</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 m-gallery-item" data-mcat="drawing">
+        <div class="visual-card">
+          <a href="assets/img/interior.png" class="glightbox" data-gallery="interior">
+            <img src="assets/img/interior.png" alt="Interior Art" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x500/E0F2FE/0284C7?text=Interior+Art'">
+            <div class="hover-overlay"><i class="bi bi-images"></i> 2 ภาพ</div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Procreate</span><span data-i18n="g_interior" class="text-truncate">วาดองค์ประกอบห้อง</span></div>
+        </div>
+      </div>
+
+      <!-- ================= 2. หมวด UI/UX & กราฟิก ================= -->
+      <div class="col-12 m-gallery-item" data-mcat="uiux">
+        <div class="category-header-line mt-4">
+          <h4 class="fw-extrabold text-navy mb-0" data-i18n="cat_uiux">ออกแบบ UI/UX & กราฟิก</h4>
+          <div class="line"></div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-6 m-gallery-item" data-mcat="uiux">
+        <div class="visual-card">
+          <a href="assets/img/blobyT.png" class="glightbox" data-gallery="uiux">
+            <img src="assets/img/blobyT.png" alt="BlobyT UI" class="img-fluid landscape-img" onerror="this.src='https://via.placeholder.com/800x400/E0F2FE/0284C7?text=BlobyT+Figma+UI'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Figma</span><span data-i18n="g_ui_blobyt">ออกแบบ UI/UX แอป BlobyT</span></div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-6 m-gallery-item" data-mcat="uiux">
+        <div class="visual-card">
+          <a href="assets/img/poster.png" class="glightbox" data-gallery="poster">
+            <img src="assets/img/poster.png" alt="Poster Design" class="img-fluid landscape-img" onerror="this.src='https://via.placeholder.com/800x400/E0F2FE/0284C7?text=Poster+Designs'">
+            <div class="hover-overlay"><i class="bi bi-images"></i> 8 ภาพ</div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Canva/PS</span><span data-i18n="g_poster">ออกแบบโปสเตอร์งานต่างๆ</span></div>
+        </div>
+      </div>
+
+      <!-- ================= 3. หมวด 3D Model, AR Effect & Video ================= -->
+      <div class="col-12 m-gallery-item" data-mcat="model3d">
+        <div class="category-header-line mt-4">
+          <h4 class="fw-extrabold text-navy mb-0" data-i18n="cat_3d">3D Model, AR Effect & Video</h4>
+          <div class="line"></div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-6 m-gallery-item" data-mcat="model3d">
+        <div class="visual-card">
+          <a href="assets/img/3d-model.JPG" class="glightbox" data-gallery="3dmodel">
+            <img src="assets/img/3d-model.JPG" alt="3D Models" class="img-fluid landscape-img" onerror="this.src='https://via.placeholder.com/800x400/E0F2FE/0284C7?text=3D+Models'">
+            <div class="hover-overlay"><i class="bi bi-images"></i> 4 ชิ้นงาน</div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Nomad/Blender/Maya</span><span data-i18n="g_3d">ปั้น 3D โมเดล (4 ชิ้น)</span></div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-6 m-gallery-item" data-mcat="model3d">
+        <div class="visual-card">
+          <a href="assets/videos/tiktok-filter.mp4" class="glightbox" data-gallery="filter">
+            <img src="assets/img/ar-filter.png" alt="TikTok Filter" class="img-fluid landscape-img" onerror="this.src='https://via.placeholder.com/800x400/E0F2FE/0284C7?text=TikTok+AR+Effect'">
+            <div class="hover-overlay"><i class="bi bi-play-circle fs-1"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Effect House</span><span data-i18n="g_filter">3 TikTok Filters (Open House)</span></div>
+        </div>
+      </div>
+
+      <!-- ================= 4. หมวดแปลภาษามังงะ & ทักษะภาษา ================= -->
+      <div class="col-12 m-gallery-item" data-mcat="language">
+        <div class="category-header-line mt-4">
+          <h4 class="fw-extrabold text-navy mb-0" data-i18n="cat_lang">แปลภาษามังงะ & ทักษะภาษา</h4>
+          <div class="line"></div>
+        </div>
+      </div>
+      
+      <div class="col-6 col-md-6 col-lg-3 m-gallery-item" data-mcat="language">
+        <div class="visual-card">
+          <a href="assets/img/manga-traslate.JPG" class="glightbox" data-gallery="lang">
+            <img src="assets/img/manga-traslate.JPG" alt="Manga" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x500/E0F2FE/0284C7?text=Manga+Translation'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Fastwork</span><span data-i18n="g_manga" class="text-truncate">แปลมังงะ & คลีนภาพ</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-lg-3 m-gallery-item" data-mcat="language">
+        <div class="visual-card">
+          <a href="assets/img/story-telling.png" class="glightbox" data-gallery="lang">
+            <img src="assets/img/story-telling.png" alt="Storytelling" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x500/E0F2FE/0284C7?text=Storytelling+Gold'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">EN (ม.ปลาย)</span><span data-i18n="g_story" class="text-truncate">เหรียญทองเล่านิทาน</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-lg-3 m-gallery-item" data-mcat="language">
+        <div class="visual-card">
+          <a href="assets/img/crossword.png" class="glightbox" data-gallery="lang">
+            <img src="assets/img/crossword.png" alt="Crossword" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x500/E0F2FE/0284C7?text=Crossword+Gold'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">EN (ม.ต้น)</span><span data-i18n="g_crossword" class="text-truncate">เหรียญทอง Crossword</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-lg-3 m-gallery-item" data-mcat="language">
+        <div class="visual-card">
+          <a href="assets/img/UiTM.png" class="glightbox" data-gallery="lang">
+            <img src="assets/img/UiTM.png" alt="UiTM" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x500/E0F2FE/0284C7?text=UiTM+Visit'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Exchange</span><span data-i18n="g_uitm" class="text-truncate">ศึกษาดูงาน UiTM มาเลเซีย</span></div>
+        </div>
+      </div>
+
+      <!-- ================= 5. หมวด Tech: เกม / เว็บ / Mobile AR ================= -->
+      <div class="col-12 m-gallery-item" data-mcat="tech">
+        <div class="category-header-line mt-4">
+          <h4 class="fw-extrabold text-navy mb-0" data-i18n="cat_tech">เกม / เว็บ / Mobile AR</h4>
+          <div class="line"></div>
+        </div>
+      </div>
+      
+      <div class="col-6 col-md-6 col-lg-3 m-gallery-item" data-mcat="tech">
+        <div class="visual-card">
+          <a href="assets/img/rnrm1.PNG" class="glightbox" data-gallery="tech">
+            <img src="assets/img/rnrm1.PNG" alt="Game" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x400/E0F2FE/0284C7?text=Ruen+Rom+Game'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Unity</span><span data-i18n="g_t1" class="text-truncate">เกม Ruen Rom (ชนะเลิศ 2568)</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-lg-3 m-gallery-item" data-mcat="tech">
+        <div class="visual-card">
+          <a href="assets/img/lore.PNG" class="glightbox" data-gallery="tech">
+            <img src="assets/img/lore.PNG" alt="Game" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x400/E0F2FE/0284C7?text=LORE+Game'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Unity</span><span data-i18n="g_t2" class="text-truncate">เกม LORE (InnoTeach)</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-lg-3 m-gallery-item" data-mcat="tech">
+        <div class="visual-card">
+          <a href="assets/img/sths1.PNG" class="glightbox" data-gallery="tech">
+            <img src="assets/img/sths1.PNG" alt="Game" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x400/E0F2FE/0284C7?text=Southern+Sense'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Unity</span><span data-i18n="g_t3" class="text-truncate">เกม Southern Sense (MIDL)</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-lg-3 m-gallery-item" data-mcat="tech">
+        <div class="visual-card">
+          <a href="assets/img/enplace.png" class="glightbox" data-gallery="tech">
+            <img src="assets/img/enplace.png" alt="Game" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x400/E0F2FE/0284C7?text=ENPLACE+Game'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Unity</span><span data-i18n="g_t4" class="text-truncate">เกมวิจัย ENPLACE (NICE)</span></div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-6 m-gallery-item" data-mcat="tech">
+        <div class="visual-card">
+          <a href="assets/img/web-fund.PNG" class="glightbox" data-gallery="tech">
+            <img src="assets/img/web-fund.PNG" alt="Web Fund" class="img-fluid landscape-img" onerror="this.src='https://via.placeholder.com/800x400/E0F2FE/0284C7?text=Web+Fund+42'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">React/Supabase</span><span data-i18n="g_t5">เว็บจัดการกองทุน (รหัส 42)</span></div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-6 m-gallery-item" data-mcat="tech">
+        <div class="visual-card">
+          <a href="assets/img/web-school.png" class="glightbox" data-gallery="tech">
+            <img src="assets/img/web-school.png" alt="Web School" class="img-fluid landscape-img" onerror="this.src='https://via.placeholder.com/800x400/E0F2FE/0284C7?text=School+Web+System'">
+            <div class="hover-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">App Script</span><span data-i18n="g_t6">ระบบเว็บร.ร.รามันห์ (ใช้งานจริง)</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-lg-6 m-gallery-item" data-mcat="tech">
+        <div class="visual-card">
+          <a href="assets/videos/ar-marker-preview.mp4" class="glightbox" data-gallery="tech">
+            <img src="assets/img/tech-ar.jpg" alt="Mobile AR" class="img-fluid landscape-img" onerror="this.src='https://via.placeholder.com/800x400/E0F2FE/0284C7?text=Mobile+AR+App'">
+            <div class="hover-overlay"><i class="bi bi-play-circle fs-1"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Vuforia AR</span><span data-i18n="g_t7">Mobile AR Marker (Fastwork)</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-lg-6 m-gallery-item" data-mcat="tech">
+        <div class="visual-card">
+          <a href="assets/videos/game-scratchT-preview.mp4" class="glightbox" data-gallery="tech">
+            <img src="assets/img/game-scratch.jpg" alt="Scratch" class="img-fluid landscape-img" onerror="this.src='https://via.placeholder.com/800x400/E0F2FE/0284C7?text=Scratch+Game'">
+            <div class="hover-overlay"><i class="bi bi-play-circle fs-1"></i></div>
+          </a>
+          <div class="visual-caption"><span class="tool-badge">Scratch</span><span data-i18n="g_t8">เกม Scratch (เรียน & Fastwork)</span></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="section-padding pb-4 mt-5">
+    <div class="container text-center">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center text-muted-slate small mt-4 px-2 border-top border-sky-subtle pt-4">
+        <span>© 2026 Norhaslina Daoh (โนร).</span>
+        <span>Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lightbox = GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true,
+        zoomable: true
+      });
+    });
+  </script>
+</body>
+</html>
