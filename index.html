@@ -5,28 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Norhaslina Daoh | E-Portfolio (Mobile & Web Developer Intern)</title>
 
-  <!-- Google Fonts: Syne (Display), Plus Jakarta Sans (EN), Anuphan (TH) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
 
-  <!-- พื้นหลังตารางสีฟ้าพาสเทล + วงกลม Parallax -->
+  <!-- TbBg & Parallax -->
   <div class="pastel-grid-bg" aria-hidden="true">
     <div class="glow-orb orb-1 parallax-scroll" data-speed="0.12"></div>
     <div class="glow-orb orb-2 parallax-scroll" data-speed="-0.08"></div>
     <div class="glow-orb orb-3 parallax-scroll" data-speed="0.06"></div>
   </div>
 
-  <!-- ================= 1. NAVBAR ================= -->
+  <!-- NavBar -->
   <nav id="mainNav" class="navbar navbar-expand-lg fixed-top glass-navbar">
     <div class="container">
       <a class="navbar-brand fw-extrabold text-navy d-flex align-items-center gap-2" href="#home" id="logoLink">
@@ -35,7 +32,7 @@
       </a>
 
       <div class="d-flex align-items-center gap-2 order-lg-3">
-        <!-- ปุ่มสลับภาษา TH / EN -->
+        <!-- TH / EN Button -->
         <button id="langToggleBtn" class="btn btn-lang-toggle rounded-pill px-3 py-1" type="button">
           <i class="bi bi-globe2 me-1 text-sky"></i>
           <span id="langLabel">EN</span>
@@ -63,30 +60,24 @@
     </div>
   </nav>
 
-  <!-- ================= 2. HERO SECTION ================= -->
   <header id="home" class="hero-wrapper position-relative overflow-hidden">
     <div class="container">
       
-      <!-- แถบ Editorial ด้านบน -->
       <div class="d-flex justify-content-between align-items-left text-muted-slate small fw-semibold mb-2 px-2">
         <span>/Norhaslina Daoh/</span>
       </div>
 
-      <!-- พาดหัว PORTFOLIO ขนาดใหญ่ (Scroll Parallax) -->
       <div class="hero-giant-title text-center parallax-scroll" data-speed="-0.06">
         <h1 class="display-portfolio">PORTFOL<span class="star-i">I</span>O</h1>
       </div>
 
-      <!-- กรอบแคปซูลตรงกลาง + ป้ายลอยตัว Mouse Parallax -->
+      <!-- Capsule + Mouse Parallax -->
       <div class="hero-stage position-relative mx-auto my-4" id="heroParallaxStage" style="max-width: 1000px;">
         
-        <!-- GIF แบนเนอร์ขนาด 1650x466 -->
         <div class="hero-gif-wrapper shadow-pastel">
-          <!-- วางไฟล์ GIF ของคุณที่ assets/img/hero-banner.gif -->
           <img src="assets/img/hero-banner.gif" alt="Norhaslina Portfolio Banner" class="hero-gif-img" onerror="this.style.backgroundColor='#E0F2FE'">
         </div>
-        
-        <!-- ป้ายสถานะ Active -->
+
         <div class="floating-pill pill-status parallax-mouse" data-depth="0.03">
           <span class="status-dot"></span>
           <span data-i18n="hero_status">พร้อมฝึกงานซัมเมอร์ มี.ค. – พ.ค.</span>
@@ -102,14 +93,13 @@
           <span data-i18n="hero_pill_2">Figma UI/UX • 3D</span>
         </div>
 
-        <!-- ลูกบาศก์ 3D ลอยตัว -->
         <div class="floating-cube cube-1 parallax-mouse" data-depth="0.07"><img style="width: 100%;" src="assets/img/unity.png"></div>
         <div class="floating-cube cube-2 parallax-mouse" data-depth="-0.06"><img style="width: 100%;" src="assets/img/react.png"></div>
         <div class="floating-cube cube-3 parallax-mouse" data-depth="0.05">AR</div>
         <div class="floating-cube cube-4 parallax-mouse" data-depth="-0.05"><img style="width: 100%;" src="assets/img/figma.png"></div>
       </div>
 
-        <!-- กรอบแคปซูลแนะนำตัว -->
+        <!-- Capsule frame -->
         <div class="hero-text-content text-center mx-auto mt-4 px-3" style="max-width: 680px;">
         <h2 class="h3 fw-extrabold text-navy mb-1" data-i18n="hero_name">
           นางสาวโนรฮัสลีนาห์ ดาโอ๊ะ (โนร)
@@ -136,10 +126,10 @@
         </div>
       </div>
 
-      <!-- แถบการ์ดเอียงสลับองศา 4 จุดเด่นหลัก -->
+      <!-- 4 Cards -->
       <div class="row g-3 justify-content-center mt-3">
         
-        <!-- การ์ด 1: NICE 2026 Research -->
+        <!-- 1st Card -->
         <div class="col-12 col-sm-6 col-lg-3">
           <a href="#projects" class="text-decoration-none h-100 d-block">
             <div class="tilt-card tilt-left p-4 d-flex flex-column justify-content-between h-100 text-start" style="min-height: 160px;">
@@ -152,7 +142,7 @@
           </a>
         </div>
 
-        <!-- การ์ด 2: Active Production -->
+        <!-- 2nd Card -->
         <div class="col-12 col-sm-6 col-lg-3">
           <a href="#projects" class="text-decoration-none h-100 d-block">
             <div class="tilt-card tilt-right p-4 d-flex flex-column justify-content-between h-100 text-start" style="min-height: 160px;">
@@ -165,7 +155,7 @@
           </a>
         </div>
 
-        <!-- การ์ด 3: Fastwork -->
+        <!-- 3rd Card -->
         <div class="col-12 col-sm-6 col-lg-3">
           <a href="#experience" class="text-decoration-none h-100 d-block">
             <div class="tilt-card tilt-left p-4 d-flex flex-column justify-content-between h-100 text-start" style="min-height: 160px;">
@@ -178,7 +168,7 @@
           </a>
         </div>
 
-        <!-- การ์ด 4: Hackathon & Awards (สลับเป็นสีฟ้าทึบ) -->
+        <!-- 4th Card -->
         <div class="col-12 col-sm-6 col-lg-3">
           <a href="#activities" class="text-decoration-none h-100 d-block">
             <div class="tilt-card tilt-right p-4 d-flex flex-column justify-content-between h-100 text-start" style="min-height: 160px;">
@@ -196,12 +186,12 @@
     </div>
   </header>
 
-  <!-- ================= 3. ABOUT ME & EDUCATION TIMELINE ================= -->
+  <!-- ================= ABOUT ME & EDUCATION TIMELINE ================= -->
   <section id="about" class="section-padding">
     <div class="container">
       <div class="row g-4 align-items-stretch">
         
-        <!-- ฝั่งซ้าย: ประวัติส่วนตัว & ข้อมูลติดต่อ -->
+        <!-- Left: About me -->
         <div class="col-lg-6">
           <div class="about-showcase-box h-100 p-4 p-md-5 d-flex flex-column justify-content-between">
             <div>
@@ -213,7 +203,7 @@
                 สวัสดีค่ะ โนรเป็นนักศึกษาชั้นปีที่ 3 ที่ชอบผสมผสานตรรกะการเขียนโปรแกรม (OOP) เข้ากับการออกแบบสื่ออินเทอร์แอกทีฟและ UI/UX ที่ใช้งานง่าย มีความตั้งใจที่จะฝึกงานช่วงซัมเมอร์ (มีนาคม – มิถุนายน) ในตำแหน่ง Mobile Developer Intern หรือ Web Developer Intern เพื่อเรียนรู้กระบวนการทำงานจริงในระดับองค์กรค่ะ
               </p>
 
-              <!-- ตารางข้อมูลติดต่อกระชับ -->
+              <!-- Contact -->
               <div class="contact-info-list d-flex flex-column gap-3 mb-4">
                 <div class="info-item">
                   <i class="bi bi-person-badge text-sky"></i>
@@ -246,7 +236,6 @@
               </div>
             </div>
 
-            <!-- การ์ดซ้อนแสดงสถิติ Fastwork -->
             <div class="mini-fastwork-banner p-3 rounded-4 border border-sky-subtle bg-white d-flex align-items-center justify-content-between">
               <div class="d-flex align-items-center gap-3">
                 <img src="assets/img/fastwork.png" alt="Fastwork Logo" style="width: 15%;">
@@ -260,7 +249,7 @@
           </div>
         </div>
 
-        <!-- ฝั่งขวา: ประวัติการศึกษา (เรียงจากปัจจุบันย้อนหลังไป มหาลัย -> ม.ปลาย -> ม.ต้น) -->
+        <!-- Right: Educations -->
         <div class="col-lg-6">
           <div class="about-showcase-box h-100 p-4 p-md-5">
             <!-- <span class="section-pill" data-i18n="edu_tag">EDUCATION TIMELINE (CURRENT → PAST)</span> -->
@@ -270,15 +259,11 @@
 
             <div class="edu-timeline-v2">
               
-              <!-- 1. มหาวิทยาลัย (ปัจจุบัน - ไฮไลต์เด่น) -->
               <div class="edu-item">
-                <!-- กรอบโลโก้ (ใส่คลาส active-logo เพื่อเน้นให้เด่น) -->
                 <div class="edu-logo-container active-logo">
-                  <!-- นำไฟล์โลโก้ ม.อ. มาใส่ในโฟลเดอร์ img -->
                   <img src="assets/img/psu.png" alt="PSU Logo" class="edu-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/th/thumb/e/ea/Prince_of_Songkla_University_Emblem.png/200px-Prince_of_Songkla_University_Emblem.png'">
                 </div>
                 
-                <!-- กล่องข้อความ (ใส่คลาส active-card) -->
                 <div class="edu-card active-card">
                   <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
                     <span class="badge bg-sky-solid rounded-pill" data-i18n="edu_1_period">2567 – ปัจจุบัน (คาดว่าจบ 2570)</span>
@@ -292,10 +277,8 @@
                 </div>
               </div>
 
-              <!-- 2. มัธยมศึกษาตอนปลาย -->
               <div class="edu-item">
                 <div class="edu-logo-container">
-                  <!-- นำไฟล์โลโก้ รามันห์ศิริวิทย์ มาใส่ -->
                   <img src="assets/img/rs.png" alt="Raman Siriwit Logo" class="edu-logo" onerror="this.src='https://data.bopp-obec.info/emis/pic_school/1095110196.jpg'">
                 </div>
                 
@@ -312,10 +295,8 @@
                 </div>
               </div>
 
-              <!-- 3. มัธยมศึกษาตอนต้น -->
               <div class="edu-item">
                 <div class="edu-logo-container">
-                  <!-- โลโก้เดียวกัน -->
                   <img src="assets/img/rs.png" alt="Raman Siriwit Logo" class="edu-logo" onerror="this.src='https://data.bopp-obec.info/emis/pic_school/1095110196.jpg'">
                 </div>
                 
@@ -340,11 +321,10 @@
     </div>
   </section>
 
-  <!-- ================= 4. SKILLS & INTERACTIVE GALLERY (STACKED CARDS) ================= -->
+  <!-- ================= SKILLS & INTERACTIVE GALLERY (STACKED CARDS) ================= -->
   <section id="skills" class="section-padding bg-white-glass overflow-hidden">
     <div class="container">
       
-      <!-- ส่วนหัว Skills -->
       <div class="row align-items-end justify-content-between mb-5 gy-3">
         <div class="col-lg-8 text-center text-lg-start">
           <span class="section-pill" data-i18n="skill_tag">HARD SKILLS & VISUAL PROOF</span>
@@ -360,10 +340,9 @@
         </div>
       </div>
 
-      <!-- ================= กล่องภาษาโปรแกรม & เครื่องมือ (Overlap Header Box) ================= -->
+      <!-- ================= Overlap Header Box ================= -->
       <div class="row g-4 mb-5 px-2">
-        
-        <!-- 1. Programming Languages (ข้อความล้วน) -->
+
         <div class="col-lg-6">
           <div class="overlap-header-box h-100 shadow-sm">
             <div class="overlap-header bg-sky-main" data-i18n="box_lang">
@@ -380,14 +359,12 @@
           </div>
         </div>
 
-        <!-- 2. Tools & Software (มีรูปภาพไอคอน) -->
         <div class="col-lg-6">
           <div class="overlap-header-box h-100 shadow-sm">
             <div class="overlap-header bg-sky-main" data-i18n="box_tools">
               <i class="bi bi-tools me-2"></i>Tools & Software
             </div>
             <div class="d-flex flex-wrap gap-2">
-              <!-- ใส่ไฟล์รูปไอคอน .png ไว้ในโฟลเดอร์ assets/img/ -->
               <span class="skill-pill">
                 <img src="assets/img/unity.png" alt="Unity" class="tool-icon" onerror="this.style.display='none'"> Unity 2D/3D
               </span>
@@ -417,20 +394,18 @@
         </div>
         
       </div>
-      <!-- ================= จบส่วนกล่อง Overlap ================= -->
 
-      <!-- กล่องการ์ด 3 หมวดหมู่หลัก (Stacked Cards + Hover View More) -->
+      <!-- Stacked Cards -->
       <div class="row g-4 justify-content-center px-2 mb-5">
         
-        <!-- การ์ด 1: Tech & Software -->
+        <!-- 1st Card: Tech & Software -->
         <div class="col-12 col-md-6 col-lg-4">
           <a href="gallery.html?filter=tech" class="text-decoration-none go-to-gallery d-block">
             <div class="skill-stacked-card">
-              <!-- แผ่นที่ซ้อนอยู่ด้านหลัง -->
+
               <div class="card-layer stack-layer-2 stack-tech-2"></div>
               <div class="card-layer stack-layer-1 stack-tech-1"></div>
-              
-              <!-- แผ่นหน้าสุด (เนื้อหา) -->
+
               <div class="card-layer stack-front border border-sky-subtle shadow-sm overflow-hidden p-0">
                 <img src="assets/img/C1.PNG" alt="Tech Background" class="front-bg-img">
                 <div class="front-glow-shape"></div>
@@ -440,8 +415,7 @@
                   <i class="bi bi-cpu-fill fs-1 text-sky mb-2 mt-2"></i>
                   <h4 class="fw-extrabold text-navy mb-2" data-i18n="hs_1_title" style="font-size: 1.15rem;">Tech & Software</h4>
                   <p class="text-muted-slate tiny-text fw-semibold mb-0">Game • Web • Mobile & AR</p>
-                  
-                  <!-- ปุ่มดูเพิ่มเติม -->
+
                   <div class="view-gallery-btn text-sky fw-bold small">
                     ดูเพิ่มเติม <i class="bi bi-arrow-right"></i>
                   </div>
@@ -452,15 +426,14 @@
           </a>
         </div>
 
-        <!-- การ์ด 2: Graphics & UI/UX -->
+        <!-- 2nd Card: Graphics & UI/UX -->
         <div class="col-12 col-md-6 col-lg-4">
           <a href="gallery.html?filter=uiux" class="text-decoration-none go-to-gallery d-block">
             <div class="skill-stacked-card">
-              <!-- แผ่นที่ซ้อนอยู่ด้านหลัง -->
+
               <div class="card-layer stack-layer-2 stack-tech-2"></div>
               <div class="card-layer stack-layer-1 stack-tech-1"></div>
-              
-              <!-- แผ่นหน้าสุด (เนื้อหา) -->
+
               <div class="card-layer stack-front border border-sky-subtle shadow-sm overflow-hidden p-0">
                 <img src="assets/img/C2.PNG" alt="Graphics Background" class="front-bg-img">
                 <div class="front-glow-shape"></div>
@@ -471,7 +444,6 @@
                   <h4 class="fw-extrabold text-navy mb-2" data-i18n="hs_2_title" style="font-size: 1.15rem;">Graphics & UI/UX</h4>
                   <p class="text-muted-slate tiny-text fw-semibold mb-0">Drawing • UI/UX • Video • 3D</p>
                   
-                  <!-- ปุ่มดูเพิ่มเติม -->
                   <div class="view-gallery-btn text-sky fw-bold small">
                     ดูเพิ่มเติม <i class="bi bi-arrow-right"></i>
                   </div>
@@ -481,15 +453,14 @@
           </a>
         </div>
 
-        <!-- การ์ด 3: Localization -->
+        <!-- 3rd Card: Localization -->
         <div class="col-12 col-md-6 col-lg-4">
           <a href="gallery.html?filter=language" class="text-decoration-none go-to-gallery d-block">
             <div class="skill-stacked-card">
-              <!-- แผ่นที่ซ้อนอยู่ด้านหลัง -->
+
               <div class="card-layer stack-layer-2 stack-tech-2"></div>
               <div class="card-layer stack-layer-1 stack-tech-1"></div>
-              
-              <!-- แผ่นหน้าสุด (เนื้อหา) -->
+
               <div class="card-layer stack-front border border-sky-subtle shadow-sm overflow-hidden p-0">
                 <img src="assets/img/C1.PNG" alt="Localization Background" class="front-bg-img">
                 <div class="front-glow-shape"></div>
@@ -500,7 +471,6 @@
                   <h4 class="fw-extrabold text-navy mb-2" data-i18n="hs_3_title" style="font-size: 1.15rem;">Localization</h4>
                   <p class="text-muted-slate tiny-text fw-semibold mb-0">English • Malay • Manga Translation</p>
                   
-                  <!-- ปุ่มดูเพิ่มเติม -->
                   <div class="view-gallery-btn text-sky fw-bold small">
                     ดูเพิ่มเติม <i class="bi bi-arrow-right"></i>
                   </div>
@@ -512,7 +482,6 @@
 
       </div>
 
-      <!-- หมวด SOFT SKILLS (คงเดิม) -->
       <div class="soft-skills-banner p-4 rounded-4 border border-sky-subtle bg-white shadow-sm mt-4">
         <div class="row align-items-center gy-3">
           <div class="col-lg-4">
@@ -539,7 +508,7 @@
     </div>
   </section>
 
-  <!-- ================= 5. FEATURED PROJECTS & RESEARCH ================= -->
+  <!-- ================= FEATURED PROJECTS & RESEARCH ================= -->
   <section id="projects" class="section-padding">
     <div class="container">
       <div class="row align-items-end justify-content-between mb-4 gy-3">
@@ -550,7 +519,6 @@
           </h2>
         </div>
 
-        <!-- ปุ่มกรองหมวดหมู่โปรเจกต์ -->
         <div class="col-lg-5 text-lg-end">
           <div class="d-inline-flex flex-wrap gap-2">
             <button class="btn filter-pill active" data-filter="all" data-i18n="flt_all">ทั้งหมด (4)</button>
@@ -563,7 +531,6 @@
 
       <div class="row g-4" id="projectContainer">
 
-        <!-- 1. วิจัย NICE 2026 (ENPLACE 2D Game) -->
         <div class="col-lg-6 project-card-wrap" data-cat="mobile research">
           <article class="project-showcase-card h-100 d-flex flex-column justify-content-between">
             <div>
@@ -608,7 +575,6 @@
           </article>
         </div>
 
-        <!-- 2. Mobile App AR Marker (Fastwork & Unity Vuforia) -->
         <div class="col-lg-6 project-card-wrap" data-cat="mobile">
           <article class="project-showcase-card h-100 d-flex flex-column justify-content-between">
             <div>
@@ -651,7 +617,6 @@
           </article>
         </div>
 
-        <!-- 3. Class Fund Management (เว็บเก็บเงินห้องรหัส 42) -->
         <div class="col-lg-6 project-card-wrap" data-cat="web">
           <article class="project-showcase-card h-100 d-flex flex-column justify-content-between">
             <div>
@@ -695,7 +660,6 @@
           </article>
         </div>
 
-        <!-- 4. เว็บจัดการระบบสารสนเทศโรงเรียนรามันห์ศิริวิทย์ -->
         <div class="col-lg-6 project-card-wrap" data-cat="web">
           <article class="project-showcase-card h-100 d-flex flex-column justify-content-between">
             <div>
@@ -745,7 +709,7 @@
     </div>
   </section>
 
-  <!-- ================= 6. COMPETITIONS, HACKATHONS & LEADERSHIP ACTIVITIES ================= -->
+  <!-- ================= COMPETITIONS, HACKATHONS & LEADERSHIP ACTIVITIES ================= -->
   <section id="activities" class="section-padding bg-white-glass">
     <div class="container">
       <div class="text-center max-w-650 mx-auto mb-5">
@@ -759,8 +723,7 @@
       </div>
 
       <div class="row g-4">
-        
-        <!-- คอลัมน์ซ้าย: การแข่งขันระดับมหาวิทยาลัย & Hackathon (2567 - 2569) -->
+
         <div class="col-lg-6">
           <div class="bento-group-card h-100 p-4">
             <h4 class="fw-extrabold text-navy mb-4 d-flex align-items-center gap-2">
@@ -804,7 +767,6 @@
           </div>
         </div>
 
-        <!-- คอลัมน์ขวา: กิจกรรมภาวะผู้นำมหาลัย + ผลงานเด่นช่วงมัธยมปลายที่เสริมสาย Tech -->
         <div class="col-lg-6">
           <div class="bento-group-card h-100 p-4">
             <h4 class="fw-extrabold text-navy mb-4 d-flex align-items-center gap-2">
@@ -852,7 +814,7 @@
     </div>
   </section>
 
-  <!-- ================= 7. WORK EXPERIENCE (Fastwork, NBT Yala, 7-Eleven Assistant Manager) ================= -->
+  <!-- ================= WORK EXPERIENCE ================= -->
   <section id="experience" class="section-padding">
     <div class="container">
       <div class="text-center max-w-650 mx-auto mb-5">
@@ -867,7 +829,6 @@
 
       <div class="row g-4 align-items-stretch">
         
-        <!-- 1. Freelance Fastwork -->
         <div class="col-lg-4">
           <div class="review-bento-card highlight-border h-100 d-flex flex-column justify-content-between">
             <div>
@@ -888,7 +849,6 @@
           </div>
         </div>
 
-        <!-- 2. NBT Yala Intern -->
         <div class="col-lg-4">
           <div class="review-bento-card h-100 d-flex flex-column justify-content-between">
             <div>
@@ -909,7 +869,6 @@
           </div>
         </div>
 
-        <!-- 3. 7-Eleven Assistant Manager -->
         <div class="col-lg-4">
           <div class="review-bento-card h-100 d-flex flex-column justify-content-between">
             <div>
@@ -934,7 +893,7 @@
     </div>
   </section>
 
-  <!-- ================= 8. CONTACT FOOTER ================= -->
+  <!-- ================= CONTACT FOOTER ================= -->
   <footer id="contact" class="section-padding pb-4">
     <div class="container">
       <div class="contact-hero-box text-center p-4 p-md-5 position-relative overflow-hidden">
@@ -957,7 +916,6 @@
           </a> -->
         </div>
 
-        <!-- สติกเกอร์ตกแต่งด้านล่างสไตล์วิดีโอเรฟเฟอเรนซ์ -->
         <div class="playful-footer-bar pt-4 mt-3 border-top border-sky-subtle d-flex flex-wrap justify-content-center gap-2">
           <span class="footer-sticker">MOBILE INTERN</span>
           <span class="footer-sticker">FULL-STACK WEB</span>
@@ -973,15 +931,9 @@
       </div>
     </div>
   </footer>
-
-  <!-- =====================================================================
-       INTERACTIVE MODAL GALLERY (เด้งขึ้นเมื่อคลิกดูตัวอย่างผลงานในแต่ละทักษะ)
-       ===================================================================== -->
   
 
-  <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
   <script src="assets/js/script.js"></script>
 </body>
 </html>
