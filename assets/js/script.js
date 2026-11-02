@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ==========================================
-  // 1. ระบบจัดการภาษา (Language Persistence)
-  // ==========================================
   const dict = {
     th: {
       // Navbar
@@ -24,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_btn_proj: 'ดูโปรเจกต์ & งานวิจัย',
       hero_btn_gallery: 'เปิดแกลลอรีรวมผลงานทุกด้าน',
       
-      // Tilt Cards (Highlights)
+      // Tilt Cards (Hlgh)
       hl_1: 'วิจัยเกมมือถือ 2D ระดับชาติ',
       hl_2: 'ระบบเว็บนำไปใช้จริงบนเว็บไซต์โรงเรียน 200+ คน',
       hl_3: 'ส่งมอบงานฟรีแลนซ์ 25+ ชิ้น',
@@ -41,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fw_mini_title: 'Fastwork Verified Freelancer',
       fw_mini_desc: '25+ ออเดอร์สำเร็จ 100% • ลูกค้าจ้างซ้ำ 15 ครั้ง',
       
-      // Education Section
+      // Edu Section
       edu_title: 'ประวัติการศึกษา',
       edu_1_period: '2567 – ปัจจุบัน (คาดว่าจบ 2570)',
       edu_1_school: 'มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตปัตตานี',
@@ -208,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fw_mini_title: 'Fastwork Verified Freelancer',
       fw_mini_desc: '25+ Completed Orders (100%) • 15 Repeat Clients',
       
-      // Education Section
+      // Edu Section
       edu_title: 'Education',
       edu_1_period: '2024 – Present (Expected 2027)',
       edu_1_school: 'Prince of Songkla University (Pattani Campus)',
@@ -364,7 +361,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // ดึงค่าภาษาจาก LocalStorage ถ้าไม่มีให้ใช้ 'en'
   let currentLang = localStorage.getItem('portfolioLang') || 'en';
   const langBtn = document.getElementById('langToggleBtn');
   const langLabel = document.getElementById('langLabel');
@@ -374,8 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
       langLabel.textContent = lang === 'th' ? 'EN' : 'TH';
     }
     document.documentElement.lang = lang;
-    
-    // แปลงข้อความทั้งหมดที่มี attribute data-i18n
+ 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[lang] && dict[lang][key]) {
@@ -386,7 +381,6 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('portfolioLang', lang);
   }
 
-  // เรียกใช้ฟังก์ชันแปลภาษาทันทีที่โหลดหน้า
   applyLanguage(currentLang);
 
   if (langBtn) {
@@ -396,9 +390,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // 2. ระบบ Smart Back Navigation (จดจำ Section ล่าสุด)
-  // ==========================================
   const logoLink = document.getElementById('logoLink');
 
   document.querySelectorAll('a.go-to-gallery').forEach(btn => {
@@ -415,9 +406,6 @@ document.addEventListener('DOMContentLoaded', () => {
     logoLink.href = 'index.html' + lastSection;
   }
 
-  // ==========================================
-  // 3. ระบบ Gallery Filter (ในหน้า gallery.html)
-  // ==========================================
   const filterBtns = document.querySelectorAll('.gallery-tab-btn, .modal-tab-btn');
   const galleryItems = document.querySelectorAll('.m-gallery-item');
 
@@ -449,9 +437,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // 4. Parallax Background & Mouse Move
-  // ==========================================
   const scrollItems = document.querySelectorAll('.parallax-scroll');
   window.addEventListener('scroll', () => {
     const sy = window.scrollY;
@@ -478,9 +463,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // 5. ปุ่มคลิกคัดลอกอีเมลอัตโนมัติ
-  // ==========================================
   const copyBtn = document.getElementById('copyEmailBtn');
   const copyLabel = document.getElementById('copyEmailLabel');
 
@@ -497,16 +479,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ==========================================
-  // 6. ระบบควบคุมวิดีโอ (เล่นเฉพาะเมื่อ Hover หรือ Click)
-  // ==========================================
   const hoverVideos = document.querySelectorAll('video.hover-to-play');
 
   hoverVideos.forEach(video => {
     
-    // สำหรับ Desktop: เล่นเมื่อเอาเมาส์ชี้ และหยุดเมื่อเอาเมาส์ออก
+    // For Desktop
     video.addEventListener('mouseenter', () => {
-      // หยุดวิดีโออื่นๆ ทั้งหมดก่อนเล่นตัวใหม่
       hoverVideos.forEach(v => {
         if (v !== video) {
           v.pause();
@@ -517,14 +495,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     video.addEventListener('mouseleave', () => {
       video.pause();
-      video.currentTime = 0; // รีเซ็ตวิดีโอกลับไปที่จุดเริ่มต้น (โชว์รูปโปสเตอร์)
+      video.currentTime = 0;
     });
 
-    // สำหรับ Mobile/Tablet: เล่นหรือหยุดเมื่อกดแตะที่วิดีโอ
+    // For Mobile/Tablet
     video.addEventListener('click', (e) => {
-      e.preventDefault(); // ป้องกันการกระโดดของหน้าเว็บ
+      e.preventDefault();
       if (video.paused) {
-        // หยุดวิดีโออื่นๆ ก่อน
         hoverVideos.forEach(v => {
           if (v !== video) {
             v.pause();

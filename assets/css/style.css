@@ -20,7 +20,7 @@ body {
   position: relative;
 }
 
-/* พื้นหลังตารางพาสเทล (Subtle Grid Pattern) */
+/* Subtle Grid Pattern */
 .pastel-grid-bg {
   position: fixed;
   inset: 0;
@@ -168,7 +168,7 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1650 / 466; /* รักษาสัดส่วนภาพ GIF อัตโนมัติ */
+  aspect-ratio: 1650 / 466;
   object-fit: cover;
   object-position: center;
 }
@@ -190,7 +190,6 @@ body {
   font-weight: 700;
 }
 
-/* ป้ายลอยตัว & ลูกบาศก์ 3D */
 .floating-pill {
   position: absolute;
   z-index: 3;
@@ -252,7 +251,7 @@ body {
     border-radius: 1.2rem;
     border-width: 3px;
   }
-  /* ซ่อนป้ายลอยตัวบางอันบนมือถือให้ดูคลีน ไม่รกทับ GIF */
+  /* Hide GIF on Mobile */
   .pill-left, .pill-right, .floating-cube {
     display: none;
   }
@@ -263,7 +262,6 @@ body {
   }
 }
 
-/* การ์ดเอียงสลับองศา */
 .tilt-card {
   background: #FFFFFF;
   border: 1px solid var(--border-soft);
@@ -350,7 +348,7 @@ body {
 .edu-timeline-v2::before {
   content: "";
   position: absolute;
-  left: 32px; /* กึ่งกลางของกล่องโลโก้ขนาด 64px */
+  left: 32px;
   top: 10px;
   bottom: 10px;
   width: 2px;
@@ -387,7 +385,7 @@ body {
 .edu-logo {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ป้องกันโลโก้ถูกตัด */
+  object-fit: contain;
 }
 
 .edu-logo-container.active-logo {
@@ -433,9 +431,8 @@ body {
     padding: 4px;
   }
   
-  /* ขยับเส้นแกนให้ตรงกับกึ่งกลางโลโก้บนมือถือ */
   .edu-timeline-v2::before {
-    left: 24px; /* กึ่งกลางโลโก้ 48px */
+    left: 24px;
   }
   
   .edu-logo-container.active-logo {
@@ -448,14 +445,13 @@ body {
   }
 }
 
-/* ================= OVERLAP HEADER BOX (กล่องทักษะมีหัวทาบด้านบน) ================= */
 .overlap-header-box {
   position: relative;
   background: #FFFFFF;
   border: 1px solid var(--border-soft);
   border-radius: 1.5rem;
   padding: 2.2rem 1.5rem 1.5rem 1.5rem;
-  margin-top: 1rem; /* เผื่อพื้นที่ให้ป้ายด้านบน */
+  margin-top: 1rem;
   transition: box-shadow 0.3s ease;
 }
 
@@ -463,11 +459,10 @@ body {
   box-shadow: 0 12px 30px -8px rgba(2, 132, 199, 0.15) !important;
 }
 
-/* ป้ายทาบทับด้านบน */
 .overlap-header {
   position: absolute;
-  top: -16px; /* ดึงให้ลอยทับเส้นขอบบน */
-  left: 24px; /* ชิดซ้าย */
+  top: -16px;
+  left: 24px;
   padding: 0.35rem 1.2rem;
   border-radius: 50rem;
   font-size: 0.85rem;
@@ -479,7 +474,6 @@ body {
   z-index: 2;
 }
 
-/* แคปซูลแต่ละทักษะ */
 .skill-pill {
   display: inline-flex;
   align-items: center;
@@ -500,7 +494,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* รูปภาพไอคอนโปรแกรม */
 .tool-icon {
   width: 16px;
   height: 16px;
@@ -508,10 +501,8 @@ body {
   margin-right: 6px;
 }
 
-/* ================= Responsive ================= */
 @media (max-width: 767.98px) {
   .overlap-header {
-    /* บนหน้าจอมือถือ จัดป้ายให้อยู่กึ่งกลางเพื่อให้สมดุล */
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
@@ -554,11 +545,11 @@ body {
   border-radius: 50rem;
 }
 
-/* ================= 3D STACKED CARDS (แอนิเมชันกางการ์ด) ================= */
+/* ================= STACKED CARDS ================= */
 .skill-stacked-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* บังคับให้เป็นสี่เหลี่ยมจัตุรัส */
+  aspect-ratio: 1 / 1;
   max-width: 320px;
   margin: 1.5rem auto;
   perspective: 1000px;
@@ -572,14 +563,12 @@ body {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* แผ่นหน้าสุด (สีขาว ตัวอักษร) */
 .stack-front {
   z-index: 3;
   transform: translateZ(10px);
 }
 
-/* ======== สถานะปกติ (ยังไม่ Hover) ======== */
-/* ให้ขอบของการ์ดแพลมออกมานิดนึง ซ้ายบนและขวาล่าง แบบเรฟเฟอเรนซ์ */
+/* ======== Normal Status (Not Hover) ======== */
 .stack-layer-1 {
   z-index: 2;
   opacity: 0.8;
@@ -592,15 +581,13 @@ body {
   transform: translate(10px, 10px) rotate(3deg);
 }
 
-/* สีเฉพาะหมวดหมู่ของการ์ดด้านหลัง */
 .stack-tech-1 { background: var(--sky-pastel); border: 2px solid var(--sky-main); }
 .stack-tech-2 { background: var(--sky-light); border: 2px solid var(--sky-accent); }
 
-/* ======== แอนิเมชันตอน Hover / กด (กระจายตัวกางออก) ======== */
 .skill-stacked-card:hover .stack-front {
   transform: translateZ(30px) translateY(-5px);
   box-shadow: 0 15px 35px -5px rgba(2, 132, 199, 0.15);
-  border-color: var(--sky-main) !important; /* เน้นกรอบให้เด่นขึ้นตอนชี้ */
+  border-color: var(--sky-main) !important;
 }
 
 .view-gallery-btn {
@@ -615,20 +602,16 @@ body {
   opacity: 1;
   max-height: 30px;
   transform: translateY(0);
-  margin-top: 0.75rem; /* เพิ่มระยะห่างด้านบนให้ข้อความดูโล่งขึ้น */
+  margin-top: 0.75rem;
 }
 
-/* ================= แผ่นหน้าสุดที่มีรูปภาพและแสงฟุ้ง (Image Front Card) ================= */
-
-/* ยกเลิกสีพื้นหลังของการ์ดหน้าสุด เพื่อให้โชว์รูปภาพ */
 .stack-front {
   background-color: transparent !important;
-  border-radius: 1.8rem !important; /* ย้ำความมนของการ์ดหน้าสุดให้เท่าการ์ดใบหลัง */
-  overflow: hidden !important; /* ตัดส่วนภาพที่ล้นขอบมนทิ้งเด็ดขาด */
-  -webkit-mask-image: -webkit-radial-gradient(white, black); /* โค้ดสำคัญ: แก้บั๊กภาพเหลี่ยมโผล่ตอนทำแอนิเมชันขยายภาพบน Safari/iOS */
+  border-radius: 1.8rem !important;
+  overflow: hidden !important;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
-/* เลเยอร์ 1: ภาพพื้นหลัง */
 .front-bg-img {
   position: absolute;
   inset: 0;
@@ -638,15 +621,13 @@ body {
   z-index: 1;
   opacity: 0.9;
   transition: transform 0.5s ease;
-  border-radius: 1.8rem; /* บังคับให้ภาพมีขอบมน 1.8rem โค้งเป๊ะเท่าการ์ดตั้งแต่แรก */
+  border-radius: 1.8rem;
 }
 
-/* ลูกเล่นซูมภาพนิดๆ ตอนกางการ์ด */
 .skill-stacked-card:hover .front-bg-img {
   transform: scale(1.1);
 }
 
-/* เลเยอร์ 2: ทรงกลมแสงฟุ้งสีฟ้าด้านหลังข้อความ */
 .front-glow-shape {
   position: absolute;
   top: 50%;
@@ -654,18 +635,15 @@ body {
   transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
-  /* แกนกลางสีขาวนวล ช่วยให้ตัวหนังสือสีน้ำเงินเข้มอ่านง่ายสุดๆ */
   background: rgba(255, 255, 255, 0.85); 
-  /* ขอบฟุ้ง 2 ชั้น: ชั้นในสีฟ้าสว่าง (sky-light) และชั้นนอกสีฟ้าพาสเทล */
   box-shadow: 0 0 50px 50px rgba(224, 242, 254, 0.95), 
               0 0 90px 70px rgba(186, 230, 253, 0.75);
   border-radius: 50%;
   filter: blur(8px);
   z-index: 2;
-  pointer-events: none; /* ป้องกันไม่ให้บล็อกการคลิก */
+  pointer-events: none;
 }
 
-/* เลเยอร์ 3: กล่องเนื้อหาตัวอักษร */
 .front-content {
   position: relative;
   z-index: 3;
@@ -680,26 +658,22 @@ body {
   }
 }
 
-/* กางแผ่นที่ 1 พุ่งไปทางซ้ายบน */
 .skill-stacked-card:hover .stack-layer-1 {
   opacity: 1;
   transform: translate(-25px, -20px) rotate(-6deg);
 }
 
-/* กางแผ่นที่ 2 พุ่งไปทางขวาล่าง */
 .skill-stacked-card:hover .stack-layer-2 {
   opacity: 0.8;
   transform: translate(25px, 20px) rotate(6deg);
 }
 
-/* ================= Responsive ปรับแต่งสำหรับมือถือ ================= */
 @media (max-width: 767.98px) {
   .skill-stacked-card {
-    max-width: 260px; /* ย่อขนาดการ์ดลงบนจอมือถือ */
+    max-width: 260px;
     margin: 1.5rem auto;
   }
-  
-  /* บนมือถือลดระยะกางออกตอน hover ลงหน่อยเพื่อไม่ให้ล้นจอ */
+
   .skill-stacked-card:hover .stack-layer-1 {
     transform: translate(-15px, -15px) rotate(-4deg);
   }
@@ -708,7 +682,6 @@ body {
   }
 }
 
-/* FEATURED PROJECTS */
 .filter-pill {
   background: #FFFFFF;
   border: 1px solid var(--border-soft);
@@ -980,7 +953,6 @@ body {
   overflow: hidden;
 }
 
-/* บังคับรูปภาพให้เต็มกล่องโดยไม่บิดเบี้ยว */
 .visual-card img {
   width: 100%;
   height: 100%;
@@ -989,16 +961,14 @@ body {
   transition: transform 0.4s ease;
 }
 
-/* ภาพแนวนอนสำหรับ Desktop */
 .landscape-img {
   min-height: 250px;
 }
 
 .visual-card:hover img {
-  transform: scale(1.05); /* ซูมรูปเล็กน้อยตอนชี้เมาส์ */
+  transform: scale(1.05);
 }
 
-/* เอฟเฟกต์ดำเงาและไอคอนเมื่อชี้เมาส์ */
 .hover-overlay {
   position: absolute;
   inset: 0;
@@ -1017,7 +987,6 @@ body {
   opacity: 1;
 }
 
-/* แถบอธิบายใต้ภาพ (แบบสั้นๆ) */
 .visual-caption {
   padding: 0.8rem 1rem;
   background: #FFFFFF;
@@ -1038,14 +1007,13 @@ body {
   border-radius: 4px;
 }
 
-/* Responsive ปรับความสูงรูปบนมือถือ */
 @media (max-width: 767.98px) {
   .visual-card img {
     min-height: 180px;
   }
 }
 
-/* ================= CATEGORY HEADER LINE (เส้นคั่นหัวข้อในแกลลอรี) ================= */
+/* ================= CATEGORY HEADER LINE ================= */
 .category-header-line {
   display: flex;
   align-items: center;
@@ -1069,7 +1037,7 @@ body {
 
 @media (max-width: 767.98px) {
   .category-header-line h4 {
-    font-size: 1.1rem; /* ย่อขนาดฟอนต์บนมือถือ */
+    font-size: 1.1rem;
   }
   .category-header-line {
     gap: 0.8rem;
